@@ -38,6 +38,7 @@ _requiredtools = getArray (missionConfigFile >> "Custom_Buildables" >> "Buildabl
 _requiredmaterials = getArray (missionConfigFile >> "Custom_Buildables" >> "Buildables" >> ComboBoxResult >> _classname >> "requiredmaterials");
 _RT_temp=getArray (missionConfigFile >> "Custom_Buildables" >> "Buildables" >> ComboBoxResult >> _classname >> "requiredtools");
 _RM_temp=getArray (missionConfigFile >> "Custom_Buildables" >> "Buildables" >> ComboBoxResult >> _classname >> "requiredmaterials");
+_SC_Cost=getNumber (missionConfigFile >> "Custom_Buildables" >> "Buildables" >> ComboBoxResult >> _classname >> "cost");
 _hastools = false;
 _hasmaterials = false;
 _weaps=[];
@@ -168,15 +169,25 @@ _ownerID = _nearestPole getVariable["CharacterID","0"];
 if(dayz_characterID == _ownerID) then {  //Keep ownership
 	_canBuildOnPlot = true;
 } else {
+
+/*
 _friendlies	= player getVariable ["friendlyTo",[]];
 if(_ownerID in _friendlies) then {
 	_canBuildOnPlot = true;
-	};
+	};	
+*/	
+	
 };
 //if plotpole is needed and none are within range or if what's in range does belong
 //to the player or a friendly we need to exit now
 
 if((_requireplot>0) and ((_IsNearPlot==0)||(!_canBuildOnPlot))) exitWith {DZE_ActionInProgress = false; cutText ["Building of this item requires a plot pole within range!" , "PLAIN DOWN"]; }; 
+
+if( !([player, _SC_Cost] call SC_fnc_removeCoins)) exitWith {
+
+DZE_ActionInProgress = false;
+cutText [format["You need %1 %2 to build this.",_SC_Cost, CurrencyName] , "PLAIN DOWN"];
+};
 
 _location = [0,0,0];
 _isOk = true;
@@ -194,6 +205,8 @@ if(_AdminCraft) then{
 player removeMagazine _x;
 } foreach _RM_temp;
 };
+
+
 
 _position = getPosATL _object;
  cutText [(localize "str_epoch_player_45"), "PLAIN DOWN"];
@@ -399,6 +412,9 @@ if(_AdminCraft) then {
 //Since player had items removed we need to give them back
 player addMagazine _x;
 } foreach _RM_temp;
+[player, _SC_Cost] call SC_fnc_addCoins;
+//give back money
+
 };
 };
  

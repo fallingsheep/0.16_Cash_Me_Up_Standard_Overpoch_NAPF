@@ -657,16 +657,14 @@ _isTrader = _typeOfCursorTarget in ["Hooker1","Hooker2","Hooker3","Hooker4","RU_
 	s_player_butcher = -1;	
 	};
 	// Study Body
-	if (_player_studybody) then {
-		if (s_player_studybody < 0) then {
-			s_player_studybody = player addAction [localize "str_action_studybody", "\z\addons\dayz_code\actions\study_body.sqf",_cursorTarget, 0, false, true, "",""];
-		};
-	} else {
-		
-		player removeAction s_player_studybody;
-		s_player_studybody = -1;
-		
+if (_player_studybody) then {
+	if (s_player_studybody < 0) then {
+		s_player_studybody = player addAction [("<t color=""#FF0000"">"+("Check Wallet") + "</t>"), "ZSC\actions\check_wallet.sqf",_cursorTarget, 0, false, true, "",""];
 	};
+} else {
+	player removeAction s_player_studybody;
+	s_player_studybody = -1;
+};
 ///////////////////////////////////////////////////BURY BODY START///////////////////////////////////////////////////////////
 if(BuryHumanScript)then{
 	if (!_isAlive && !_isZombie && !_isAnimal && _hasETool && _isMan && _canDo) then {
@@ -796,6 +794,25 @@ if((_typeOfCursorTarget in DZE_DoorsLocked)) then {
 		{player removeAction _x} count s_player_combi;s_player_combi = [];
 		s_player_unlockvault = -1;
 	};
+	//Currency
+		if(_typeOfCursorTarget in ZSC_MoneyStorage && (player distance _cursorTarget < 5)) then {
+		if (s_bank_dialog < 0) then {
+				s_bank_dialog = player addAction ["Money Storage", "ZSC\actions\bank_dialog.sqf",_cursorTarget, 3, true, true, "", ""];	
+		};
+	} else {
+     	player removeAction s_bank_dialog;
+		s_bank_dialog = -1;
+	};
+
+	// cars 
+	if( _isVehicle && !_isMan &&_isAlive && !_isMan && !locked _cursorTarget && !(_cursorTarget isKindOf "Bicycle") && (player distance _cursorTarget < 5)) then {		
+		if (s_bank_dialog2 < 0) then {
+			s_bank_dialog2 = player addAction ["Money Storage", "ZSC\actions\bank_dialog.sqf",_cursorTarget, 3, true, true, "", ""];
+		};			
+	} else {		
+		player removeAction s_bank_dialog2;
+		s_bank_dialog2 = -1;
+	};
 	//Allow owner to pack vault
 	if(_typeOfCursorTarget in DZE_UnLockedStorage && _characterID != "0" && (player distance _cursorTarget < 3)) then {
 		if (s_player_lockvault < 0) then {
@@ -825,7 +842,55 @@ if((_typeOfCursorTarget in DZE_DoorsLocked)) then {
 		player removeAction s_player_information;
 		s_player_information = -1;
 	};
+	//Currency
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and !(_traderType in serverTraders)) then {
+		if (s_givemoney_dialog < 0) then {
+			s_givemoney_dialog = player addAction [format["Give Money to %1", (name _cursorTarget)], "ZSC\actions\give_player_dialog.sqf",_cursorTarget, 3, true, true, "", ""];
+		};
+	} else {
+		player removeAction s_givemoney_dialog;
+		s_givemoney_dialog = -1;
+	};
+	if (isNil "SmeltingInProgress") then {
+		SmeltingInProgress = false;
+	};
+
+	_player_money = player getVariable["cashMoney",0];
+	// Smelt gold coins
+	if (inflamed _cursorTarget and (_player_money > SmeltingGoldBarsToCoinsRate) and !SmeltingInProgress) then {
+		if (s_smelt_coins < 0) then {
+			if (_player_money > 10000) then {
+				s_smelt_coins = player addAction [format["Smelt %1 %2 into a 10oz Gold Bar", (SmeltingGoldBarsToCoinsRate * 10), CurrencyName], "scripts\Smelting\player_smeltcoins.sqf","ItemGoldBar10oz", 3, true, true, "", ""];
+			} else {
+				s_smelt_coins = player addAction [format["Smelt %1 %2 into a Gold Bar", SmeltingGoldBarsToCoinsRate, CurrencyName], "scripts\Smelting\player_smeltcoins.sqf","ItemGoldBar", 3, true, true, "", ""];
+			};
+		};
+	} else {
+		player removeAction s_smelt_coins;
+		s_smelt_coins = -1;
+	};
+
+	_hasGoldBars = "ItemGoldBar" in _magazinesPlayer;
+	// Smelt bars into coins
+	if (inflamed _cursorTarget and (_hasGoldBars) and !SmeltingInProgress) then {
+		if (s_smelt_bars < 0) then {
+			s_smelt_bars = player addAction [format["Smelt a Gold Bar into %1 %2", SmeltingGoldBarsToCoinsRate, CurrencyName], "scripts\Smelting\player_smeltbars.sqf","ItemGoldBar", 3, true, true, "", ""];
+		};
+	} else {
+		player removeAction s_smelt_bars;
+		s_smelt_bars = -1;
+	};
 	
+	_has10ozGoldBars = "ItemGoldBar10oz" in _magazinesPlayer;
+	// Smelt bars into coins
+	if (inflamed _cursorTarget and (_has10ozGoldBars) and !SmeltingInProgress) then {
+		if (s_smelt_10bars < 0) then {
+			s_smelt_10bars = player addAction [format["Smelt a 10oz Gold Bar into %1 %2", (SmeltingGoldBarsToCoinsRate * 10), CurrencyName], "gold\player_smeltbars.sqf","ItemGoldBar10oz", 3, true, true, "", ""];
+		};
+	} else {
+		player removeAction s_smelt_10bars;
+		s_smelt_10bars = -1;
+	}; 
 	//Fuel Pump
 	if(_typeOfCursorTarget in dayz_fuelpumparray) then {	
 		if (s_player_fuelauto < 0) then {
@@ -1283,6 +1348,20 @@ _bankrobbery = cursorTarget isKindOf "Notebook";
 	s_player_clothesmenu = -1;
 	player removeAction s_player_clothesmenu2;
 	s_player_clothesmenu2 = -1;
+	//Currency
+	player removeAction s_givemoney_dialog;
+	s_givemoney_dialog = -1;
+	player removeAction s_bank_dialog;
+	s_bank_dialog = -1;
+	player removeAction s_bank_dialog2;
+	s_bank_dialog2 = -1;
+	//Smelt bars + coins
+	player removeAction s_smelt_coins;
+	s_smelt_coins = -1;
+	player removeAction s_smelt_bars;
+	s_smelt_bars = -1;
+	player removeAction s_smelt_10bars;
+	s_smelt_10bars = -1;
 };
 //Dog actions on player self
 _dogHandle = player getVariable ["dogID", 0];

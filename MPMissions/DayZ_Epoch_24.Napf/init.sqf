@@ -134,7 +134,7 @@ call compile preprocessFileLineNumbers "fixes\compiles.sqf";
 progressLoadingScreen 0.6;
 call compile preprocessFileLineNumbers "scripts\Buildables\Crafting_Compiles.sqf";
 progressLoadingScreen 0.7;
-call compile preprocessFileLineNumbers "server_traders.sqf";				//Compile trader configs
+call compile preprocessFileLineNumbers "server_traders_napf_24.sqf";				//Compile trader configs
 progressLoadingScreen 0.8;
 call compile preprocessFileLineNumbers "logistic\init.sqf";
 progressLoadingScreen 0.9;
@@ -149,7 +149,7 @@ if (isServer) then {
 	
 	// Add trader citys
 	_nil = [] execVM "\z\addons\dayz_server\missions\DayZ_Epoch_24.Napf\mission.sqf";
-	_serverMonitor = 	[] execVM "\z\addons\dayz_code\system\server_monitor.sqf";
+	_serverMonitor = 	[] execVM "\z\addons\dayz_server\system\server_monitor.sqf";
 };
 
 endLoadingScreen; // Work around for loadscreen freeze
@@ -167,6 +167,7 @@ if (!isDedicated) then {
 		_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	};
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	
+	execVM "ZSC\compiles\playerHud.sqf";
 	
 
 	

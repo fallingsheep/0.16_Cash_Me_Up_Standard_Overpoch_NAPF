@@ -1,71 +1,98 @@
-class E_RscListBox
-{
-	access = 0;
-	type = 5;
-	w = 0.4;
-	h = 0.4;
-	rowHeight = 0;
-	colorText[] = {0.75,0.75,0.75,0.8};
-	colorScrollbar[] = {0.75,0.75,0.75,0.5};
-	colorSelect[] = {1,1,1,1};
-	colorSelect2[] = {1,1,1,1};
-	colorSelectBackground[] = {0,0,0,1};
-	colorSelectBackground2[] = {0.75,0.75,0.75,.8};
-	colorBackground[] = {0,0,0,0};
-	soundSelect[] = {"",0.1,1};
-	arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
-	arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
-	class ScrollBar
-	{
-		color[] = {0.75,0.75,0.75,0.5};
-		colorActive[] = {0.75,0.75,0.75,0.5};
-		colorDisabled[] = {0.75,0.75,0.75,.5};
-		shadow = 0;
-		thumb = "\ca\ui\data\ui_scrollbar_thumb_ca.paa";
-		arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
-		arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
-		border = "\ca\ui\data\ui_border_scroll_ca.paa";
-	};
-	style = 0x02;
-	font = "Bitstream";
-	shadow = 2;
-	sizeEx = 0.037;
-	color[] = {0.75,0.75,0.75,0.5};
-	period = 1.2;
-	maxHistoryDelay = 1;
-	autoScrollSpeed = -1;
-	autoScrollDelay = 5;
-	autoScrollRewind = 0;
-};
-class E_Class_Dialog
+class ClassDialog
 {
 	idd = -1;
-	movingenable = true;
+	movingenable = 0;
+	class controlsBackground 
+	{
+		class ClassBackground: RscText
+		{
+			text = "";
+			x = .31 * safezoneW + safezoneX;
+			y = .3 * safezoneH + safezoneY;
+			w = .138504 * safezoneW;
+			h = .325 * safezoneH;
+			colorBackground[] = {.3,.3,.3,1};
+			fixedWidth = 0;
+		};
+	};
 	class Controls
 	{
-		class E_Class_ListBox: E_RscListBox
+		class ClassSelect: RscText
+		{
+			text = "Class Selection";
+			x = .31 * safezoneW + safezoneX;
+			y = .26 * safezoneH + safezoneY;
+			w = .138504 * safezoneW;
+			h = .04025 * safezoneH;
+			colorText[] = {1,1,1,1};
+			colorBackground[] = {.384,.702,.886,.8};
+			fixedWidth = 0;
+			shadow = 1;
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * .6)";
+		};
+		class ClassList
 		{
 			idc = 8888;
-			x = 0.424439 * safezoneW + safezoneX;
-			y = 0.292117 * safezoneH + safezoneY;
-			w = 0.151945 * safezoneW;
-			h = 0.32007 * safezoneH;
+			x = .31 * safezoneW + safezoneX;
+			y = .303 * safezoneH + safezoneY;
+			w = .138504 * safezoneW;
+			h = .25 * safezoneH;
+			autoScrollDelay = 5;
+			autoScrollRewind = 0;
+			autoScrollSpeed = -1;
+			colorSelect[] = {};
+			colorSelectBackground[] = {.5,.5,.5,1};
+			colorText[] = {.88,.88,.88,1};
+			font = "Zeppelin32";
+			maxHistoryDelay = 1;
+			onLBSelChanged = "call classPreview;";
+			rowHeight = 0;
+			class ScrollBar
+			{
+				arrowEmpty = "\ca\ui\data\arrow_up_ca.paa";
+				arrowFull = "\ca\ui\data\arrow_up_ca.paa";
+				border = "\ca\ui\data\ui_border_scroll_ca.paa";
+				color[] = {.5,.5,.5,.5};
+				colorActive[] = {.5,.5,.5,.3};
+				colorDisabled[] = {.5,.5,.5,.1};
+				shadow = 0;
+				thumb = "";
+			};
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * .6)";
+			soundSelect[] = {"",.1,1};
+			style = 16;
+			type = 5;
 		};
-		class E_Class_ButtonSelect: E_RscButton
+		class ClassButton
 		{
-			idc = -1;
-			text = "Select class";
-			colorText[] = {1,1,1,.9};
-			colorDisabled[] = {0.4,0.4,0.4,0};
-			colorBackground[] = {0.75,0.75,0.75,0.8};
-			colorBackgroundDisabled[] = {0,0,0};
-			colorBackgroundActive[] = {0.75,0.75,0.75,1};
-			colorFocused[] = {0.75,0.75,0.75,.5};
-			x = 0.46 * safezoneW + safezoneX;
-			y = 0.638 * safezoneH + safezoneY;
-			w = 0.08 * safezoneW;
-			h = 0.03 * safezoneH;
+			idc = 8889;
+			text = "Select Class";
+			x = .324 * safezoneW + safezoneX;
+			y = .567 * safezoneH + safezoneY;
+			w = .109 * safezoneW;
+			h = .044 * safezoneH;
 			action = "call classPick;";
+			borderSize = 0;
+			colorBackground[] = {.4,.4,.4,1};
+			colorBackgroundActive[] = {.5,.5,.5,1};
+			colorBackgroundDisabled[] = {.2,.2,.2,1};
+			colorBorder[] = {.88,.88,.88,1};		
+			colorDisabled[] = {.2,.2,.2,1};
+			colorFocused[] = {.4,.4,.4,1};
+			colorShadow[] = {0,0,0,0};
+			colorText[] = {1,1,1,1};
+			font = "Zeppelin32";
+			offsetPressedX = .002;
+			offsetPressedY = .002;
+			offsetX = .003;
+			offsetY = .003;
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * .6)";
+			soundClick[] = {"\ca\ui\data\sound\onclick",.07,1};
+			soundEnter[] = {"\ca\ui\data\sound\onover",.09,1};
+			soundEscape[] = {"\ca\ui\data\sound\onescape",.09,1};
+			soundPush[] = {"\ca\ui\data\sound\new1",0,0};			
+			style = 2;
+			type = 1;
 		};
 	};
 };

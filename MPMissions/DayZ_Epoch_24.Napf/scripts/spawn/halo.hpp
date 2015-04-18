@@ -1,67 +1,114 @@
-class E_Halo_Dialog
+class HaloDialog
 {
 	idd = -1;
-	movingenable = true;
+	movingenable = 0;
+	class controlsBackground 
+	{
+		class HaloBackground: RscText
+		{
+			text = "";
+			x = .370287 * safezoneW + safezoneX;
+			y = .338822 * safezoneH + safezoneY;
+			w = .260299 * safezoneW;
+			h = .3 * safezoneH;
+			colorBackground[] = {.3,.3,.3,1};
+			fixedWidth = 0;
+		};
+	};
 	class Controls
 	{
-		class E_Halo_ButtonGround: E_RscButton
+		class HaloSelect: RscText
 		{
-			idc = -1;
-			text = "GROUND";
-			colorText[] = {1,1,1,.9};
-			colorDisabled[] = {0.4,0.4,0.4,0};
-			colorBackground[] = {0.75,0.75,0.75,0.8};
-			colorBackgroundDisabled[] = {0,0.0,0};
-			colorBackgroundActive[] = {0.75,0.75,0.75,1};
-			colorFocused[] = {0.75,0.75,0.75,.5};
-			font = "Bitstream";
-			x = 0.409766 * safezoneW + safezoneX;
-			y = 0.528704 * safezoneH + safezoneY;
-			w = 0.0641667 * safezoneW;
-			h = 0.0540741 * safezoneH;
-			action = "haloSelect = 0";
-		};
-		class E_Halo_ButtonAir: E_RscButton
-		{
-			idc = -1;
-			text = "HALO";
-			colorText[] = {1,1,1,.9};
-			colorDisabled[] = {0.4,0.4,0.4,0};
-			colorBackground[] = {0.75,0.75,0.75,0.8};
-			colorBackgroundDisabled[] = {0,0.0,0};
-			colorBackgroundActive[] = {0.75,0.75,0.75,1};
-			colorFocused[] = {0.75,0.75,0.75,.5};
-			x = 0.525781 * safezoneW + safezoneX;
-			y = 0.528704 * safezoneH + safezoneY;
-			w = 0.0641667 * safezoneW;
-			h = 0.0540741 * safezoneH;
-			action = "haloSelect = 1";
-		};
-		class E_Halo_PicGround: RscPicture
-		{
-			idc = -1;
-			style = 0x30;
-			font = "Bitstream";
+			text = "Spawn Type Selection";
+			x = .370288 * safezoneW + safezoneX;
+			y = .289 * safezoneH + safezoneY;
+			w = .260299 * safezoneW;
+			h = .05 * safezoneH;
+			colorText[] = {1,1,1,1};
+			colorBackground[] = {.384,.702,.886,.8};
 			fixedWidth = 0;
-			shadow = 0;
-			text = "\ca\warfare2\Images\con_barracks.paa";
-			x = 0.411458 * safezoneW + safezoneX;
-			y = 0.425 * safezoneH + safezoneY;
-			w = 0.0615625 * safezoneW;
-			h = 0.0753703 * safezoneH;
+			shadow = 1;
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * .6)";
 		};
-		class E_Halo_PicHalo: RscPicture
+		class HaloAir: RscPicture
+		{
+			fixedWidth = 0;
+			text = "\ca\ui\data\iconplane_ca.paa";
+			x = .403107 * safezoneW + safezoneX;
+			y = .386064 * safezoneH + safezoneY;
+			w = .0738056 * safezoneW;
+			h = .0873141 * safezoneH;
+		};
+		class HaloGround: RscPicture
+		{
+			fixedWidth = 0;
+			text = "\ca\ui\data\icontruck_ca.paa";
+			x = .524484 * safezoneW + safezoneX;
+			y = .386064 * safezoneH + safezoneY;
+			w = .0732848 * safezoneW;
+			h = .0868511 * safezoneH;
+		};
+		class HaloButtonAir
 		{
 			idc = -1;
-			style = 0x30;
-			font = "Bitstream";
-			fixedWidth = 0;
-			shadow = 0;
-			text = "\ca\air\Data\Ico\para_ca.paa";
-			x = 0.527083 * safezoneW + safezoneX;
-			y = 0.419445 * safezoneH + safezoneY;
-			w = 0.0620833 * safezoneW;
-			h = 0.0781481 * safezoneH;
+			text = "Air";
+			x = .402585 * safezoneW + safezoneX;
+			y = .523 * safezoneH + safezoneY;
+			w = .0743267 * safezoneW;
+			h = .0877774 * safezoneH;
+			action = "uiNamespace setVariable ['haloChoice',1];";
+			borderSize = 0;
+			colorBackground[] = {.4,.4,.4,1};
+			colorBackgroundActive[] = {.5,.5,.5,1};
+			colorBackgroundDisabled[] = {.2,.2,.2,1};
+			colorBorder[] = {.88,.88,.88,1};		
+			colorDisabled[] = {.2,.2,.2,1};
+			colorFocused[] = {.4,.4,.4,1};
+			colorShadow[] = {0,0,0,0};
+			colorText[] = {1,1,1,1};
+			font = "Zeppelin32";
+			offsetPressedX = .002;
+			offsetPressedY = .002;
+			offsetX = .003;
+			offsetY = .003;
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * .6)";
+			soundClick[] = {"\ca\ui\data\sound\onclick",.07,1};
+			soundEnter[] = {"\ca\ui\data\sound\onover",.09,1};
+			soundEscape[] = {"\ca\ui\data\sound\onescape",.09,1};
+			soundPush[] = {"\ca\ui\data\sound\new1",0,0};			
+			style = 2;
+			type = 1;
+		};
+		class HaloButtonGround
+		{
+			idc = -1;
+			text = "Ground";
+			x = .524484 * safezoneW + safezoneX;
+			y = .523 * safezoneH + safezoneY;
+			w = .0743267 * safezoneW;
+			h = .0877774 * safezoneH;
+			action = "uiNamespace setVariable ['haloChoice',0];";
+			borderSize = 0;
+			colorBackground[] = {.4,.4,.4,1};
+			colorBackgroundActive[] = {.5,.5,.5,1};
+			colorBackgroundDisabled[] = {.2,.2,.2,1};
+			colorBorder[] = {.88,.88,.88,1};		
+			colorDisabled[] = {.2,.2,.2,1};
+			colorFocused[] = {.4,.4,.4,1};
+			colorShadow[] = {0,0,0,0};
+			colorText[] = {1,1,1,1};
+			font = "Zeppelin32";
+			offsetPressedX = .002;
+			offsetPressedY = .002;
+			offsetX = .003;
+			offsetY = .003;
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * .6)";
+			soundClick[] = {"\ca\ui\data\sound\onclick",.07,1};
+			soundEnter[] = {"\ca\ui\data\sound\onover",.09,1};
+			soundEscape[] = {"\ca\ui\data\sound\onescape",.09,1};
+			soundPush[] = {"\ca\ui\data\sound\new1",0,0};			
+			style = 2;
+			type = 1;
 		};
 	};
 };

@@ -1,94 +1,47 @@
-class Category_664 {
-	class ItemJerrycan {
-		type = "trade_items";
-		buy[] = {4,"ItemSilverBar"};
-		sell[] = {2,"ItemSilverBar"};
-	};
-	class ItemJerrycanEmpty {
-		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class PartEngine {
-		type = "trade_items";
-		buy[] = {5,"ItemGoldBar"};
-		sell[] = {1,"ItemSilverBar10oz"};
-	};
-	class PartVRotor {
-		type = "trade_items";
-		buy[] = {5,"ItemGoldBar"};
-		sell[] = {1,"ItemSilverBar10oz"};
-	};
-	class PartWheel {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemSilverBar"};
-	};
-	class PartGlass {
-		type = "trade_items";
-		buy[] = {1,"ItemGoldBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class PartGeneric {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {6,"ItemSilverBar"};
-	};
-	class PartFueltank {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar"};
-	};
-	class ItemFuelBarrel {
-		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
-	};
-};
 class Category_509 {
 	class ItemJerrycan {
 		type = "trade_items";
-		buy[] = {4,"ItemSilverBar"};
-		sell[] = {2,"ItemSilverBar"};
+		buy[] ={200,"Coins"};
+		sell[] ={100,"Coins"};
 	};
 	class ItemJerrycanEmpty {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={100,"Coins"};
+		sell[] ={50,"Coins"};
 	};
 	class PartEngine {
 		type = "trade_items";
-		buy[] = {5,"ItemGoldBar"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] ={5000,"Coins"};
+		sell[] ={2500,"Coins"};
 	};
 	class PartVRotor {
 		type = "trade_items";
-		buy[] = {5,"ItemGoldBar"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] ={5000,"Coins"};
+		sell[] ={2500,"Coins"};
 	};
 	class PartWheel {
 		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {2,"ItemSilverBar"};
+		buy[] ={1000,"Coins"};
+		sell[] ={500,"Coins"};
 	};
 	class PartGlass {
 		type = "trade_items";
-		buy[] = {1,"ItemGoldBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={500,"Coins"};
+		sell[] ={250,"Coins"};
 	};
 	class PartGeneric {
 		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {6,"ItemSilverBar"};
+		buy[] ={600,"Coins"};
+		sell[] ={150,"Coins"};
 	};
 	class PartFueltank {
 		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar"};
+		buy[] ={2000,"Coins"};
+		sell[] ={1000,"Coins"};
 	};
 	class ItemFuelBarrel {
 		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
+		buy[] ={2000,"Coins"};
+		sell[] ={1000,"Coins"};
 	};
 };

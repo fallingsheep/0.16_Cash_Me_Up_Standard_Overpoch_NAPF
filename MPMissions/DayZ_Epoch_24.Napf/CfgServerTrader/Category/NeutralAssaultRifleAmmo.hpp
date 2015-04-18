@@ -1,54 +1,54 @@
 class Category_643 {
 	class 30Rnd_556x45_Stanag {
 		type = "trade_items";
-		buy[] = {4,"ItemSilverBar"};
-		sell[] = {2,"ItemSilverBar"};
+		buy[] ={100,"Coins"};
+		sell[] ={50,"Coins"};
 	};
 	class 20Rnd_762x51_FNFAL {
 		type = "trade_items";
-		buy[] = {4,"ItemSilverBar10oz"};
-		sell[] = {2,"ItemSilverBar10oz"};
+		buy[] ={200,"Coins"};
+		sell[] ={100,"Coins"};
 	};
 	class 30Rnd_545x39_AK {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={100,"Coins"};
+		sell[] ={50,"Coins"};
 	};
 	class 30Rnd_762x39_AK47 {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={100,"Coins"};
+		sell[] ={50,"Coins"};
 	};
 	class 30Rnd_762x39_SA58 {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={200,"Coins"};
+		sell[] ={100,"Coins"};
 	};
 };
 class Category_609 {
 	class 30Rnd_556x45_Stanag {
 		type = "trade_items";
-		buy[] = {4,"ItemSilverBar"};
-		sell[] = {2,"ItemSilverBar"};
+		buy[] ={100,"Coins"};
+		sell[] ={50,"Coins"};
 	};
 	class 20Rnd_762x51_FNFAL {
 		type = "trade_items";
-		buy[] = {6,"ItemSilverBar10oz"};
-		sell[] = {2,"ItemSilverBar10oz"};
+		buy[] ={200,"Coins"};
+		sell[] ={100,"Coins"};
 	};
 	class 30Rnd_545x39_AK {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={100,"Coins"};
+		sell[] ={50,"Coins"};
 	};
 	class 30Rnd_762x39_AK47 {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={100,"Coins"};
+		sell[] ={50,"Coins"};
 	};
 	class 30Rnd_762x39_SA58 {
 		type = "trade_items";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={200,"Coins"};
+		sell[] ={100,"Coins"};
 	};
 };

@@ -1,94 +1,22 @@
 class Category_605 {
-	class SVD_CAMO {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
-	class M40A3 {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
-	class M14_EP1 {
-		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar10oz"};
-		sell[] = {1,"ItemGoldBar10oz"};
-	};
-	class huntingrifle {
-		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
-	};
-	class M4SPR {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
-	class SVD {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
-	class SVD_des_EP1 {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
-	class M24 {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
-	class M24_des_EP1 {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
+class SVD_CAMO {type = "trade_weapons";buy[] ={67500,"Coins"};sell[] ={10000,"Coins"};};
+class M40A3 {type = "trade_weapons";buy[] ={65000,"Coins"};sell[] ={10000,"Coins"};};
+class M14_EP1 {type = "trade_weapons";buy[] ={60000,"Coins"};sell[] ={10000,"Coins"};};
+class huntingrifle {type = "trade_weapons";buy[] ={40000,"Coins"};sell[] ={10000,"Coins"};};
+class M4SPR {type = "trade_weapons";buy[] ={60000,"Coins"};sell[] ={10000,"Coins"};};
+class SVD {type = "trade_weapons";buy[] ={65000,"Coins"};sell[] ={10000,"Coins"};};
+class SVD_des_EP1 {type = "trade_weapons";buy[] ={65000,"Coins"};sell[] ={10000,"Coins"};};
+class M24 {type = "trade_weapons";buy[] ={65000,"Coins"};sell[] ={10000,"Coins"};};
+class M24_des_EP1 {type = "trade_weapons";buy[] ={65000,"Coins"};sell[] ={10000,"Coins"};};
 };
 class Category_640 {
-	class SVD_CAMO {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
-	class M40A3 {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
-	class M14_EP1 {
-		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar10oz"};
-		sell[] = {1,"ItemGoldBar10oz"};
-	};
-	class huntingrifle {
-		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
-	};
-	class M4SPR {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
-	class SVD {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
-	class SVD_des_EP1 {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
-	class M24 {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
-	class M24_des_EP1 {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar10oz"};
-		sell[] = {6,"ItemGoldBar"};
-	};
+class SVD_CAMO {type = "trade_weapons";buy[] ={67500,"Coins"};sell[] ={10000,"Coins"};};
+class M40A3 {type = "trade_weapons";buy[] ={65000,"Coins"};sell[] ={10000,"Coins"};};
+class M14_EP1 {type = "trade_weapons";buy[] ={60000,"Coins"};sell[] ={10000,"Coins"};};
+class huntingrifle {type = "trade_weapons";buy[] ={40000,"Coins"};sell[] ={10000,"Coins"};};
+class M4SPR {type = "trade_weapons";buy[] ={60000,"Coins"};sell[] ={10000,"Coins"};};
+class SVD {type = "trade_weapons";buy[] ={65000,"Coins"};sell[] ={10000,"Coins"};};
+class SVD_des_EP1 {type = "trade_weapons";buy[] ={65000,"Coins"};sell[] ={10000,"Coins"};};
+class M24 {type = "trade_weapons";buy[] ={65000,"Coins"};sell[] ={10000,"Coins"};};
+class M24_des_EP1 {type = "trade_weapons";buy[] ={65000,"Coins"};sell[] ={10000,"Coins"};};
 };

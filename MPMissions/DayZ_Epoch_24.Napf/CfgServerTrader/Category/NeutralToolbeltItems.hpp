@@ -1,174 +1,88 @@
-class Category_663 {
-	class ItemCompass {
-		type = "trade_weapons";
-		buy[] = {6,"ItemSilverBar"};
-		sell[] = {3,"ItemSilverBar"};
-	};
-	class Binocular {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class Binocular_Vector {
-		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
-	};
-	class ItemEtool {
-		type = "trade_weapons";
-		buy[] = {9,"ItemSilverBar10oz"};
-		sell[] = {6,"ItemSilverBar10oz"};
-	};
-	class ItemFlashlight {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class ItemFlashlightRed {
-		type = "trade_weapons";
-		buy[] = {1,"ItemSilverBar10oz"};
-		sell[] = {5,"ItemSilverBar"};
-	};
-	class ItemGPS {
-		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
-	};
-	class ItemHatchet_DZE {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class ItemKnife {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class ItemMap {
-		type = "trade_weapons";
-		buy[] = {6,"ItemSilverBar"};
-		sell[] = {3,"ItemSilverBar"};
-	};
-	class ItemMatchbox_DZE {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class ItemToolbox {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class ItemWatch {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class NVGoggles {
-		type = "trade_weapons";
-		buy[] = {4,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
-	};
-	class ItemCrowbar {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class ItemMachete {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
-	};
-	class ItemFishingPole {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
-	};
-};
+
 class Category_510 {
 	class ItemCompass {
 		type = "trade_weapons";
-		buy[] = {6,"ItemSilverBar"};
-		sell[] = {3,"ItemSilverBar"};
+		buy[] ={200,"Coins"};
+		sell[] ={100,"Coins"};
 	};
 	class Binocular {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={60,"Coins"};
+		sell[] ={30,"Coins"};
 	};
 	class Binocular_Vector {
 		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
+		buy[] ={2000,"Coins"};
+		sell[] ={1000,"Coins"};
 	};
 	class ItemEtool {
 		type = "trade_weapons";
-		buy[] = {9,"ItemSilverBar10oz"};
-		sell[] = {6,"ItemSilverBar10oz"};
+		buy[] = {3000,"Coins"};
+		sell[] ={1500,"Coins"};
 	};
 	class ItemFlashlight {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={60,"Coins"};
+		sell[] ={1,"Coins"};
 	};
 	class ItemFlashlightRed {
 		type = "trade_weapons";
-		buy[] = {1,"ItemSilverBar10oz"};
-		sell[] = {5,"ItemSilverBar"};
+		buy[] ={300,"Coins"};
+		sell[] ={150,"Coins"};
 	};
 	class ItemGPS {
 		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
+		buy[] ={2000,"Coins"};
+		sell[] ={1000,"Coins"};
 	};
 	class ItemHatchet_DZE {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={60,"Coins"};
+		sell[] ={30,"Coins"};
 	};
 	class ItemKnife {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={60,"Coins"};
+		sell[] ={30,"Coins"};
 	};
 	class ItemMap {
 		type = "trade_weapons";
-		buy[] = {6,"ItemSilverBar"};
-		sell[] = {3,"ItemSilverBar"};
+		buy[] ={180,"Coins"};
+		sell[] ={1,"Coins"};
 	};
 	class ItemMatchbox_DZE {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={60,"Coins"};
+		sell[] ={30,"Coins"};
 	};
 	class ItemToolbox {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={60,"Coins"};
+		sell[] ={30,"Coins"};
 	};
 	class ItemWatch {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={60,"Coins"};
+		sell[] ={30,"Coins"};
 	};
 	class NVGoggles {
 		type = "trade_weapons";
-		buy[] = {4,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
+		buy[] ={4000,"Coins"};
+		sell[] ={2000,"Coins"};
 	};
 	class ItemCrowbar {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={60,"Coins"};
+		sell[] ={30,"Coins"};
 	};
 	class ItemMachete {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar"};
-		sell[] = {1,"ItemSilverBar"};
+		buy[] ={60,"Coins"};
+		sell[] ={30,"Coins"};
 	};
 	class ItemFishingPole {
 		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
+		buy[] ={600,"Coins"};
+		sell[] ={300,"Coins"};
 	};
 };

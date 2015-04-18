@@ -1,84 +1,20 @@
 class Category_606 {
-	class M9SD {
-		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
-	};
-	class glock17_EP1 {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
-	};
-	class Colt1911 {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
-	};
-	class M9 {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar"};
-		sell[] = {2,"ItemSilverBar10oz"};
-	};
-	class MakarovSD {
-		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
-	};
-	class revolver_gold_EP1 {
-		type = "trade_weapons";
-		buy[] = {3,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
-	class Makarov {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
-	};
-	class revolver_EP1 {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
-	};
+class M9SD {type = "trade_weapons";buy[] ={17500,"Coins"};sell[] ={7500,"Coins"};};
+class glock17_EP1 {type = "trade_weapons";buy[] ={15000,"Coins"};sell[] ={5000,"Coins"};};
+class Colt1911 {type = "trade_weapons";buy[] ={15000,"Coins"};sell[] ={5000,"Coins"};};
+class M9 {type = "trade_weapons";buy[] ={15000,"Coins"};sell[] ={5000,"Coins"};};
+class MakarovSD {type = "trade_weapons";buy[] ={5000,"Coins"};sell[] ={1000,"Coins"};};
+class revolver_gold_EP1 {type = "trade_weapons";buy[] ={20000,"Coins"};sell[] ={7500,"Coins"};};
+class Makarov {type = "trade_weapons";buy[] ={20000,"Coins"};sell[] ={10000,"Coins"};};
+class revolver_EP1 {type = "trade_weapons";buy[] ={18500,"Coins"};sell[] ={7500,"Coins"};};
 };
 class Category_674 {
-	class M9SD {
-		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
-	};
-	class glock17_EP1 {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar"};
-		sell[] = {5,"ItemSilverBar10oz"};
-	};
-	class Colt1911 {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
-	};
-	class M9 {
-		type = "trade_weapons";
-		buy[] = {1,"ItemGoldBar"};
-		sell[] = {2,"ItemSilverBar10oz"};
-	};
-	class MakarovSD {
-		type = "trade_weapons";
-		buy[] = {2,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
-	};
-	class revolver_gold_EP1 {
-		type = "trade_weapons";
-		buy[] = {3,"ItemGoldBar"};
-		sell[] = {2,"ItemGoldBar"};
-	};
-	class Makarov {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
-	};
-	class revolver_EP1 {
-		type = "trade_weapons";
-		buy[] = {2,"ItemSilverBar10oz"};
-		sell[] = {1,"ItemSilverBar10oz"};
-	};
+class M9SD {type = "trade_weapons";buy[] ={17500,"Coins"};sell[] ={7500,"Coins"};};
+class glock17_EP1 {type = "trade_weapons";buy[] ={15000,"Coins"};sell[] ={5000,"Coins"};};
+class Colt1911 {type = "trade_weapons";buy[] ={15000,"Coins"};sell[] ={5000,"Coins"};};
+class M9 {type = "trade_weapons";buy[] ={15000,"Coins"};sell[] ={5000,"Coins"};};
+class MakarovSD {type = "trade_weapons";buy[] ={5000,"Coins"};sell[] ={1000,"Coins"};};
+class revolver_gold_EP1 {type = "trade_weapons";buy[] ={20000,"Coins"};sell[] ={7500,"Coins"};};
+class Makarov {type = "trade_weapons";buy[] ={20000,"Coins"};sell[] ={10000,"Coins"};};
+class revolver_EP1 {type = "trade_weapons";buy[] ={18500,"Coins"};sell[] ={7500,"Coins"};};
 };

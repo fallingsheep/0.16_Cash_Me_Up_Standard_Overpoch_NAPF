@@ -15,6 +15,7 @@ _obj = _this;
 _ownerID = _obj getVariable["ownerPUID","0"];
 _objectID 	= _obj getVariable["ObjectID","0"];
 _objectUID	= _obj getVariable["ObjectUID","0"];
+_objMoney	= _obj getVariable["bankMoney",0];
 _playerUID = getPlayerUID player;
 
 [1,1] call dayz_HungerThirst;
@@ -23,6 +24,7 @@ player playActionNow "Medic";
 if(_objectID == "0" && _objectUID == "0") exitWith {DZE_ActionInProgress = false; s_player_packtent = -1; cutText [(localize "str_epoch_player_14"), "PLAIN DOWN"];};
 
 if(_ownerID != _playerUID) exitWith {DZE_ActionInProgress = false; s_player_packtent = -1; cutText [localize "str_fail_tent_pack", "PLAIN DOWN"];};
+if (_objMoney > 0) exitWith {DZE_ActionInProgress = false; s_player_packtent = -1; cutText ["There is still money in the tent. Packing cancelled." , "PLAIN DOWN"]};
 
 _alreadyPacking = _obj getVariable["packing",0];
 

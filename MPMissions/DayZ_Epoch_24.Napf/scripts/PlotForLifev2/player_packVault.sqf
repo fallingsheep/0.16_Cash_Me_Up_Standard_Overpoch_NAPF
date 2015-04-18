@@ -25,6 +25,7 @@ _combination = _obj getVariable["characterID","0"];
 _ownerID = _obj getVariable["ownerPUID","0"];
 _objectID 	= _obj getVariable["ObjectID","0"];
 _objectUID	= _obj getVariable["ObjectUID","0"];
+_objMoney	= _obj getVariable["bankMoney",0];
 _playerUID = getPlayerUID player;
 
 player removeAction s_player_packvault;
@@ -37,6 +38,7 @@ if((_combination != dayz_combination) && (_ownerID != _playerUID)) exitWith { DZ
 _alreadyPacking = _obj getVariable["packing",0];
 
 if (_alreadyPacking == 1) exitWith {DZE_ActionInProgress = false; s_player_packvault = -1; cutText [format[(localize "str_epoch_player_120"),_text] , "PLAIN DOWN"]};
+if (_objMoney > 0) exitWith {DZE_ActionInProgress = false; s_player_packvault = -1; cutText ["There is still money in the vault. Packing cancelled." , "PLAIN DOWN"]};
 _obj setVariable["packing",1];
 
 cutText [format[(localize "str_epoch_player_121"),_text], "PLAIN DOWN"];

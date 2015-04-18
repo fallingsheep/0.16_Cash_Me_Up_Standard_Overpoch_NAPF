@@ -48,7 +48,7 @@ if ((_characterID == dayz_combination) || (_ownerID == dayz_playerUID)) then {
 		// Since item was not claimed proceed with claiming it.
 		_obj setVariable["claimed",_playerID,true];
 	};
-	
+	_objMoney	= _obj getVariable["bankMoney",0];
 	_dir = direction _obj;
 	_vector = [(vectorDir _obj), (vectorUp _obj)];
 	_pos	= _obj getVariable["OEMPos",(getposATL _obj)];
@@ -81,6 +81,7 @@ if ((_characterID == dayz_combination) || (_ownerID == dayz_playerUID)) then {
 			_holder setPosATL _pos;
 			player reveal _holder;
 	
+			_holder setVariable ["bankMoney", _objMoney, true];
 			_holder setVariable["CharacterID",_characterID,true];
 			_holder setVariable["ObjectID",_objectID,true];
 			_holder setVariable["ObjectUID",_objectUID,true];

@@ -28,6 +28,8 @@ sleep 5;
 _playerNear = _obj call dze_isnearest_player;
 if(_playerNear) exitWith { DZE_ActionInProgress = false; cutText [(localize "str_epoch_player_11") , "PLAIN DOWN"];  };
 
+
+_objMoney	= _obj getVariable["bankMoney",0];
 _characterID = _obj getVariable["CharacterID","0"];
 _objectID 	= _obj getVariable["ObjectID","0"];
 _objectUID	= _obj getVariable["ObjectUID","0"];
@@ -55,6 +57,7 @@ if(!isNull _obj) then {
 	_holder setPosATL _pos;
 	player reveal _holder;
 	
+	_holder setVariable ["bankMoney", _objMoney, true];
 	_holder setVariable["CharacterID",_characterID,true];
 	_holder setVariable["ObjectID",_objectID,true];
 	_holder setVariable["ObjectUID",_objectUID,true];

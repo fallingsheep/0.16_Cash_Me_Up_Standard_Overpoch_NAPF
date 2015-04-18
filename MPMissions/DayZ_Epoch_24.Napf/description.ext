@@ -1,3 +1,6 @@
+//Currency
+#include "ZSC\config\cfgServerTrader.hpp"
+
 //Journal
 class RscIGUIShortcutButton;
 #include "scripts\journal\CfgPlayerStats\defines.hpp"
@@ -14,8 +17,8 @@ class RscIGUIShortcutButton;
 
 respawn = "BASE";
 respawndelay = 5;
-onLoadMission= "DayZ Epoch Chernarus";
-OnLoadIntro = "Welcome to DayZ Epoch Chernarus";
+onLoadMission= "DayZ Epoch NAPF";
+OnLoadIntro = "Welcome to DayZ Epoch NAPF";
 OnLoadIntroTime = False;
 OnLoadMissionTime = False;
 disabledAI = true;
@@ -774,6 +777,8 @@ class RscPictureGUI
 #include "scripts\dzgm\defines.hpp"
 class RscTitles
 {
+//Currency
+#include "ZSC\config\ZSChud.hpp"
 //DZGM
 #include "scripts\dzgm\icons.hpp"
 titles[] = {"DeathScr","wm_disp"};
@@ -1594,6 +1599,10 @@ class CfgSounds
 
 //slot machine
 #include "scripts\gambling\slotmachine\slots.hpp"
-#include "scripts\gambling\guessinggame\guess.hpp"
+
 //Skin Trader
 #include "scripts\zupa\skins\SkinGui.hpp"
+
+//Currency
+#include "ZSC\config\ZSCdefines.hpp"
+#include "ZSC\config\ZSCdialogs.hpp"

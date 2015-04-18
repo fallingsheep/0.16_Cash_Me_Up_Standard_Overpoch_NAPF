@@ -130,6 +130,7 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functi
 progressLoadingScreen 0.4;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";				//Compile regular functions
 progressLoadingScreen 0.5;
+call compile preprocessFileLineNumbers "ZSC\gold\ZSCinit.sqf";
 call compile preprocessFileLineNumbers "fixes\compiles.sqf";
 progressLoadingScreen 0.6;
 call compile preprocessFileLineNumbers "scripts\Buildables\Crafting_Compiles.sqf";

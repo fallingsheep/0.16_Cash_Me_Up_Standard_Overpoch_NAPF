@@ -338,22 +338,11 @@ if(WalkAmongstDeadScript)then{
 };
 if(HeroPerkScript)then{
 	//hero spawn
-	herospawn = compile preprocessFileLineNumbers "scripts\HeroPerks\heroperk.sqf";
-};
-//ESS
-espawn = compile preprocessFileLineNumbers "scripts\spawn\spawn.sqf";
-waitUntil {!isNil "PVDZE_plr_LoginRecord"};
-if (!isDedicated && (dayzPlayerLogin2 select 2)) then {
-
-[] spawn espawn;
-	if(HeroPerkScript)then{
-		player spawn herospawn;
-	};
+	call compile preprocessFileLineNumbers "scripts\HeroPerks\heroperk.sqf";
 };
 
 []execVM "scripts\gambling\slotmachine\slots.sqf";
 []execVM "scripts\gambling\guessinggame\guess.sqf";
-
 
 if(WeaponModScript)then{
 	call compile preprocessFileLineNumbers "scripts\wmod\init.sqf";

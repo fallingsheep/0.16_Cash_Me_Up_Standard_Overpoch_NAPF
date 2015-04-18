@@ -336,6 +336,7 @@ dayz_resetSelfActions = {
     s_player_fillbarrel = -1;
 	s_player_clothesmenu = -1;
 	s_player_clothesmenu2 = -1;
+	s_givemoney_dialog = -1;
 
 };
 call dayz_resetSelfActions;

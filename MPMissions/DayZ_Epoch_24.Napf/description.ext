@@ -1598,3 +1598,8 @@ class CfgSounds
 //Currency
 #include "ZSC\config\ZSCdefines.hpp"
 #include "ZSC\config\ZSCdialogs.hpp"
+
+//ESS V2
+#include "scripts\spawn\class.hpp"
+#include "scripts\spawn\halo.hpp"
+#include "scripts\spawn\spawn.hpp"

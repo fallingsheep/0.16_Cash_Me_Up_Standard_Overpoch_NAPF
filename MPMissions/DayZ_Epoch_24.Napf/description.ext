@@ -1577,12 +1577,6 @@ class CfgSounds
 #include "scripts\dzgm\groupManagement.hpp"
 
 
-//ESS
-#include "scripts\spawn\defines.hpp"
-#include "scripts\spawn\class.hpp"
-#include "scripts\spawn\halo.hpp"
-#include "scripts\spawn\spawn.hpp"
-
 //Door Mangement
 #include "scripts\doorManagement\doorUnlock.hpp"
 #include "scripts\doorManagement\doorManagement.hpp"

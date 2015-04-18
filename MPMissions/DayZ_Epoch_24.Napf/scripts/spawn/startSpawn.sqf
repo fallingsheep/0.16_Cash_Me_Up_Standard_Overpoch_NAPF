@@ -18,6 +18,10 @@ player hideObject false;
 enableEnvironment true;
 0 fadeSound 1;
 cutText ["","BLACK IN"];
+if(ServerWelcomeCreditsScript)then{
+	//Welcome Credits
+	 execVM "scripts\ServerWelcomeCredits.sqf";
+};
 
 if (!isNil "_haloDrop") then {
 	while {(((getPos player) select 2) > _autoOpenHeight) && {isNil "bis_fnc_halo_para_dirAbs"}} do {

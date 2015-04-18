@@ -163,12 +163,17 @@ if (!isDedicated) then {
 	
 	//Run the player monitor
 	if (IntroMusicScript) then {
-		 _id = player addEventHandler ["Respawn", {_id = [] spawn player_death; _nul = [] execVM "scripts\intromusic\intromusic.sqf";}];
+		 _id = player addEventHandler ["Respawn", {_id = [] spawn player_death; 
+		 [] execVM "scripts\intromusic\intromusic.sqf";}
+		 ];
 	}else{
 		_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	};
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	
+	//Coins
 	execVM "ZSC\compiles\playerHud.sqf";
+	//ESS V2
+	execVM "scripts\spawn\start.sqf";
 	
 
 	
@@ -323,10 +328,7 @@ if(RegenBloodScript)then{
 	//Regen Blood
 	 execVM "scripts\RegenBlood\regenblood.sqf";
 };
-if(ServerWelcomeCreditsScript)then{
-	//Welcome Credits
-	 execVM "scripts\ServerWelcomeCredits.sqf";
-};
+
 if(ZombieTruckScript)then{
 //Zombie Truck
 call compile preprocessFileLineNumbers "scripts\zombietruck\init.sqf";

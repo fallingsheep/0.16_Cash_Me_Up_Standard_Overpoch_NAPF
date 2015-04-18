@@ -31,6 +31,10 @@ _unit addMagazine _magazine;
 _unit addWeapon _weapon;
 _unit selectWeapon _weapon;
 _unit addBackpack _backpack;
+
+_cash = round(random 20) * 1000; // number between 0 and 20 000
+// Soul Hive
+_unit setVariable["CashMoney",_cash ,true];
 if ((getNumber (configFile >> "CfgWeapons" >> _weapon >> "type")) == 2) then {_unit setVariable ["CanGivePistol",false]};
 if ((getNumber (configFile >> "CfgMagazines" >> _magazine >> "count")) < 8) then {_unit addMagazine _magazine};
 

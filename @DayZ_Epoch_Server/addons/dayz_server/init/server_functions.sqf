@@ -814,8 +814,6 @@ dayz_recordLogin = {
 currentInvites = [];
 publicVariable "currentInvites";
 
-#include "ESSconfig.sqf"
-
 dayz_perform_purge = {
 	if(!isNull(_this)) then {
 		_group = group _this;
@@ -1132,4 +1130,3 @@ KK_fnc_positionToString = {
 	]
 };
 execVM "\z\addons\dayz_server\init\broadcaster.sqf";
-execVM "\z\addons\dayz_server\init\ESSfloor.sqf";

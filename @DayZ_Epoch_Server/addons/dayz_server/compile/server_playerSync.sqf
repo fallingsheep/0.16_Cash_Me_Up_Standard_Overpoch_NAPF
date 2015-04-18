@@ -44,9 +44,7 @@ if (_inTransit) exitWith {
 private["_debug","_distance"];
 _debug = getMarkerpos "respawn_west";
 _distance = _debug distance _charPos;
-if (_distance < 2000) exitWith { 
-	diag_log format["ERROR: server_playerSync: Cannot Sync Player %1 [%2]. Position in debug! %3",_name,_characterID,_charPos];
-};
+if (_distance < 2000) exitWith {};
 
 //Check for server initiated updates
 _isNewMed =		_character getVariable["medForceUpdate",false];		//Med Update is forced when a player receives some kind of med incident
@@ -87,7 +85,7 @@ if (_characterID != "0") then {
 	};
 	if (_isNewGear || _forceGear) then {
 		//diag_log ("gear..."); sleep 0.05;
-		_playerGear = [weapons _character,_magazines];
+		_playerGear = [weapons _character,_magazines, _character getVariable["cashMoney",0]]; 
 		//diag_log ("playerGear: " +str(_playerGear));
 		_backpack = unitBackpack _character;
 		if(_playerwasNearby) then {

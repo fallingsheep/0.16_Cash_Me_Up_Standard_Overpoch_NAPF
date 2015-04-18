@@ -126,6 +126,9 @@ if (isServer) then {
 			_unit enableAI "MOVE";
 			_unit enableAI "ANIM";
 			_unit enableAI "FSM";
+			_cash = round(random 20) * 1000; // number between 0 and 20 000
+// Soul Hive
+_unit setVariable["CashMoney",_cash ,true];
 		
 		};
 

@@ -11,7 +11,7 @@ TFV_ACC =  false;   // Allow combining currency? This attempts to sort the playe
 TFV_WIPS =    5;   // *How many weapons can be sold per stage of trading? Each stage of trading is the length of time to perform the standard trading animation.
 TFV_MIPS =    8;   // *How many magazines can be sold per stage of trading?
 TFV_ATIS = true;   // Allow toolbelt items to be sold? Toolbelt items are classed as weapons and will be sold without warning when weapons are sold. Keys will ALWAYS be safe.
-TFV_COINS = false;  //Coins System
+TFV_COINS = true;  //Coins System
 TFV_DEBUG = false;  //Debug
 
 

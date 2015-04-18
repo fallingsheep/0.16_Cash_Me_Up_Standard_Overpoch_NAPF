@@ -1,0 +1,2 @@
+//Open dialog
+createDialog "RscDisplayGuess";

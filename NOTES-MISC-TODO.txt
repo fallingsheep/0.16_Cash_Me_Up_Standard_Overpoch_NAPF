@@ -1,0 +1,9 @@
+BUGS/TEST/TODO
+trade from vehicle - test new version
+overwatch clothes - add to BE filters 
+random hemp fields - need to reduce amount
+Gambling trader - test
+overwatch weapons added DZMS, WAI, DZMSHotspots - test
+overwatch cars WAI - test
+multiple death messages - test
+Oil Barrels wholesale traders - test 

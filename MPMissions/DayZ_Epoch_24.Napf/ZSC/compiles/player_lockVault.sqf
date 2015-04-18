@@ -39,7 +39,7 @@ if (_alreadyPacking == 1) exitWith {DZE_ActionInProgress = false; s_player_lockv
 _obj setVariable["packing",1];
 
 // Set the bank money of the old vault to zero early, to prevent dupe glitching by a second player
-_obj setVariable ["bankMoney", 0, true];
+//_obj setVariable ["bankMoney", 0, true];  blocked to test 
 if (s_bank_dialog >= 0) then {
 	player removeAction s_bank_dialog;
 	s_bank_dialog = -1;
@@ -47,6 +47,24 @@ if (s_bank_dialog >= 0) then {
 
 _dir = direction _obj;
 _pos = _obj getVariable["OEMPos",(getposATL _obj)];
+sleep 1;
+ 
+_objMoneyNew = _obj getVariable["bankMoney",0];
+ 
+//Checks to see if the values have changed if they have the players will be punished
+//cutText [format ["Old Coins: %1  New coins: %2",_objMoney,_objMoneyNew],"PLAIN"];
+if(_objMoney != _objMoneyNew) exitWith {
+_nearPlayers = _this nearEntities ["CAManBase", 2];
+cutText ["We do not accept duping, you will now be punished", "PLAIN DOWN"];
+{
+removeAllWeapons _x;
+removeBackpack _x; 
+_x setVariable["cashMoney",0,true];
+(vehicle _x) setVehicleAmmo 0;
+    } forEach _nearPlayers;
+s_player_lockvault = -1;
+DZE_ActionInProgress = false;
+};
 
 if(!isNull _obj) then {
 

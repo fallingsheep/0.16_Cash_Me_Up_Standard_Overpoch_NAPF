@@ -22,7 +22,7 @@ class Category_636 {
 	class bulk_ItemSandbag {
 		type = "trade_items";
 		buy[] ={18000,"Coins"};
-		sell[] ={18000,"Coins"};
+		sell[] ={9000,"Coins"};
 	};
 	class bulk_ItemTankTrap {
 		type = "trade_items";
@@ -32,12 +32,12 @@ class Category_636 {
 	class bulk_ItemWire {
 		type = "trade_items";
 		buy[] ={1000,"Coins"};
-		sell[] ={1000,"Coins"};
+		sell[] ={800,"Coins"};
 	};
 	class bulk_PartGeneric {
 		type = "trade_items";
 		buy[] ={2000,"Coins"};
-		sell[] ={500,"Coins"};
+		sell[] ={800,"Coins"};
 	};
 	class CinderBlocks {
 		type = "trade_items";
@@ -51,8 +51,8 @@ class Category_636 {
 	};
 	class MortarBucket {
 		type = "trade_items";
-		buy[] ={10000,"Coins"};
-		sell[] ={5000,"Coins"};
+		buy[] ={1000,"Coins"};
+		sell[] ={500,"Coins"};
 	};
 	class PartPlankPack {
 		type = "trade_items";

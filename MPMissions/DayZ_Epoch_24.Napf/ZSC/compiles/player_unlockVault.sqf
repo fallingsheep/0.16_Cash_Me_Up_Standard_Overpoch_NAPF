@@ -53,6 +53,7 @@ if ((_ownerID == dayz_combination) || (_ownerID == dayz_playerUID)) then {
 	_objectUID	= _obj getVariable["ObjectUID","0"];
 	_objMoney	= _obj getVariable["bankMoney",0];
 	_claimedBy = _obj getVariable["claimed","0"];
+	_objMoney	= _obj getVariable["bankMoney",0];
 	
 	if (_claimedBy == _playerID) then {
 

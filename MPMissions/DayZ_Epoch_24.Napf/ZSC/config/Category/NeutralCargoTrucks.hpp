@@ -59,6 +59,26 @@ class Category_653 {
 		buy[] ={20000,"Coins"};
 		sell[] ={10000,"Coins"};
 	};
+	class MtvrReammo {
+		type = "trade_any_vehicle";
+		buy[] ={20000,"Coins"};
+		sell[] ={10000,"Coins"};
+	};
+	class MtvrRefuel {
+		type = "trade_any_vehicle";
+		buy[] ={20000,"Coins"};
+		sell[] ={10000,"Coins"};
+	};
+	class MtvrRepair {
+		type = "trade_any_vehicle";
+		buy[] ={20000,"Coins"};
+		sell[] ={10000,"Coins"};
+	};
+	class MtvrSalvage_DES_EP1 {
+		type = "trade_any_vehicle";
+		buy[] ={20000,"Coins"};
+		sell[] ={10000,"Coins"};
+	};
 	class MTVR {
 		type = "trade_any_vehicle";
 		buy[] ={20000,"Coins"};
@@ -122,6 +142,26 @@ class Category_586 {
 		sell[] ={5000,"Coins"};
 	};
 	class KamazOpen_DZE {
+		type = "trade_any_vehicle";
+		buy[] ={20000,"Coins"};
+		sell[] ={10000,"Coins"};
+	};
+	class MtvrReammo {
+		type = "trade_any_vehicle";
+		buy[] ={20000,"Coins"};
+		sell[] ={10000,"Coins"};
+	};
+	class MtvrRefuel {
+		type = "trade_any_vehicle";
+		buy[] ={20000,"Coins"};
+		sell[] ={10000,"Coins"};
+	};
+	class MtvrRepair {
+		type = "trade_any_vehicle";
+		buy[] ={20000,"Coins"};
+		sell[] ={10000,"Coins"};
+	};
+	class MtvrSalvage_DES_EP1 {
 		type = "trade_any_vehicle";
 		buy[] ={20000,"Coins"};
 		sell[] ={10000,"Coins"};

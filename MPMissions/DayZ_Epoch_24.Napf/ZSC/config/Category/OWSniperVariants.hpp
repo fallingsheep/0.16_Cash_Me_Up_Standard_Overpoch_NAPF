@@ -11,6 +11,11 @@ class FHQ_XM2010_DESERT {type = "trade_weapons";buy[] = {80000,"Coins"};sell[] =
 class FHQ_XM2010_NV_DESERT {type = "trade_weapons";buy[] = {80000,"Coins"};sell[] = {30000,"Coins"};};
 class FHQ_XM2010_NV_SD_DESERT {type = "trade_weapons";buy[] = {80000,"Coins"};sell[] = {30000,"Coins"};};
 class FHQ_XM2010_SD_DESERT {type = "trade_weapons";buy[] = {80000,"Coins"};sell[] = {30000,"Coins"};};
+class FHQ_XM2010_BASE {type = "trade_weapons";buy[] = {80000,"Coins"};sell[] = {30000,"Coins"};};
+class FHQ_XM2010_SD_BASE {type = "trade_weapons";buy[] = {80000,"Coins"};sell[] = {30000,"Coins"};};
+class FHQ_XM2010_TWS_DESERT {type = "trade_weapons";buy[] = {200000,"Coins"};sell[] = {30000,"Coins"};};
+class FHQ_XM2010_TWS_SD_DESERT {type = "trade_weapons";buy[] = {200000,"Coins"};sell[] = {30000,"Coins"};};
+class FHQ_XM2010_WDL_CAMO {type = "trade_weapons";buy[] = {80000,"Coins"};sell[] = {30000,"Coins"};};
 class vil_SVDK {type = "trade_weapons";buy[] = {80000,"Coins"};sell[] = {30000,"Coins"};};
 class vil_SVD_63 {type = "trade_weapons";buy[] = {80000,"Coins"};sell[] = {30000,"Coins"};};
 class vil_SVD_M {type = "trade_weapons";buy[] = {80000,"Coins"};sell[] = {30000,"Coins"};};
@@ -25,3 +30,4 @@ class gms_k98_knife {type = "trade_weapons";buy[] = {50000,"Coins"};sell[] = {20
 class gms_k98_rg {type = "trade_weapons";buy[] = {50000,"Coins"};sell[] = {20000,"Coins"};};
 class gms_k98zf39 {type = "trade_weapons";buy[] = {50000,"Coins"};sell[] = {20000,"Coins"};};
 };
+

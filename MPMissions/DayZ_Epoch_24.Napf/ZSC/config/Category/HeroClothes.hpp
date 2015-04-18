@@ -9,22 +9,12 @@ class Category_476 {
 		buy[] ={2000,"Coins"};
 		sell[] ={1000,"Coins"};
 	};
-	class Skin_Soldier_Sniper_PMC_DZ {
-		type = "trade_items";
-		buy[] ={2000,"Coins"};
-		sell[] ={1000,"Coins"};
-	};
 	class Skin_FR_OHara_DZ {
 		type = "trade_items";
 		buy[] ={2000,"Coins"};
 		sell[] ={1000,"Coins"};
 	};
 	class Skin_FR_Rodriguez_DZ {
-		type = "trade_items";
-		buy[] ={2000,"Coins"};
-		sell[] ={1000,"Coins"};
-	};
-	class Skin_CZ_Soldier_Sniper_EP1_DZ {
 		type = "trade_items";
 		buy[] ={2000,"Coins"};
 		sell[] ={1000,"Coins"};

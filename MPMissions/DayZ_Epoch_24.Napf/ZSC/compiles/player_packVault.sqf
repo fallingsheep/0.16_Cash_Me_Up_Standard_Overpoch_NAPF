@@ -25,6 +25,7 @@ _ownerID = _obj getVariable["CharacterID","0"];
 _objectID 	= _obj getVariable["ObjectID","0"];
 _objectUID	= _obj getVariable["ObjectUID","0"];
 _objMoney	= _obj getVariable["bankMoney",0];
+_playerUID = getPlayerUID player;
 
 player removeAction s_player_packvault;
 s_player_packvault = 1;

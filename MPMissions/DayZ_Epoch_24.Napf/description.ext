@@ -1576,8 +1576,6 @@ class CfgSounds
 //DZGM
 #include "scripts\dzgm\groupManagement.hpp"
 
-//Config based traders
-#include "CfgServerTrader\cfgServerTrader.hpp"
 
 //ESS
 #include "scripts\spawn\defines.hpp"

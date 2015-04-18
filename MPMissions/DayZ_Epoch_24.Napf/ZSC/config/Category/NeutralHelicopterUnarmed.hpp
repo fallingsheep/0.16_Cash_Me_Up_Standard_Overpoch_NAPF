@@ -40,4 +40,24 @@ class Category_519 {
 		buy[] ={500000,"Coins"};
 		sell[] ={100000,"Coins"};
 	};
+	class pook_H13_medevac {
+		type = "trade_any_vehicle";
+		buy[] ={60000,"Coins"};
+		sell[] ={30000,"Coins"};
+	};
+	class pook_H13_civ_slate {
+		type = "trade_any_vehicle";
+		buy[] ={60000,"Coins"};
+		sell[] ={30000,"Coins"};
+	};
+	class pook_H13_civ_ru_yellow {
+		type = "trade_any_vehicle";
+		buy[] ={60000,"Coins"};
+		sell[] ={30000,"Coins"};
+	};
+	class pook_H13_transport_PMC {
+		type = "trade_any_vehicle";
+        buy[] ={60000,"Coins"};
+		sell[] ={30000,"Coins"};
+	};	
 };

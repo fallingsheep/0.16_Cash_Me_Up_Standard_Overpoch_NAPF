@@ -20,6 +20,11 @@ class Category_510 {
 		buy[] = {3000,"Coins"};
 		sell[] ={1500,"Coins"};
 	};
+	class ItemRadio {
+		type = "trade_weapons";
+		buy[] = {8000,"Coins"};
+		sell[] ={2500,"Coins"};	
+	};
 	class ItemFlashlight {
 		type = "trade_weapons";
 		buy[] ={60,"Coins"};
@@ -27,8 +32,8 @@ class Category_510 {
 	};
 	class ItemFlashlightRed {
 		type = "trade_weapons";
-		buy[] ={300,"Coins"};
-		sell[] ={150,"Coins"};
+		buy[] ={500,"Coins"};
+		sell[] ={250,"Coins"};
 	};
 	class ItemGPS {
 		type = "trade_weapons";

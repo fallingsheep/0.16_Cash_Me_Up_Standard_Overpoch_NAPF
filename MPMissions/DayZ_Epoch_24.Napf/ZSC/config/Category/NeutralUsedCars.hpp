@@ -84,4 +84,34 @@ class Category_520 {
 		buy[] ={5000,"Coins"};
 		sell[] ={2000,"Coins"};
 	};
+	class Old_moto_TK_Civ_EP1 {
+		type = "trade_any_vehicle";
+		buy[] ={3000,"Coins"};
+		sell[] ={2000,"Coins"};
+	};
+	class TT650_Civ {
+		type = "trade_any_vehicle";
+		buy[] ={3000,"Coins"};
+		sell[] ={2000,"Coins"};
+	};
+	class TT650_Gue {
+		type = "trade_any_vehicle";
+		buy[] ={3000,"Coins"};
+		sell[] ={2000,"Coins"};
+	};
+	class TT650_Ins {
+		type = "trade_any_vehicle";
+		buy[] ={3000,"Coins"};
+		sell[] ={2000,"Coins"};
+	};
+	class TT650_TK_CIV_EP1 {
+		type = "trade_any_vehicle";
+		buy[] ={3000,"Coins"};
+		sell[] ={2000,"Coins"};
+	};
+	class TT650_TK_EP1 {
+		type = "trade_any_vehicle";
+		buy[] ={3000,"Coins"};
+		sell[] ={2000,"Coins"};
+	};
 };

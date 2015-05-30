@@ -30,7 +30,7 @@ if (_qty >= _qty_in) then {
 	 
 	[1,1] call dayz_HungerThirst;
 	// force animation 
-	player playActionNow "Medic";
+	//player playActionNow "Medic";
 	
 	//_dis=20;
 	//_sfx = "repair";

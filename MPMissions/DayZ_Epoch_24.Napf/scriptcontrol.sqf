@@ -3,7 +3,9 @@
 
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
-server_name = "0.15 NAPF"; //Watermark Text
+server_name = "0.16 NAPF"; //Watermark Text
+//Slow zombies
+walkerZombieScript = true;
 //Gambling ( Slotmachine, Guessing Game)
 GambleingScript = false; // NO NAPF CASINO YET
 //No Voice Inside chat
@@ -172,7 +174,7 @@ if (isServer) then {
 
 // DO NOT CHANGE THIS!!
 //Repack version 
-REPACKMOD = "Overpoch NAPF"; 
-BUILDNUMBER = "38";
+REPACKMOD = "0.16 Overpoch NAPF"; 
+BUILDNUMBER = "8";
 
 

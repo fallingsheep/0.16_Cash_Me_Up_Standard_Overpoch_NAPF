@@ -128,7 +128,7 @@ TraderDialogLoadItemList = {
 
 		// Action file to use for trade
 		_afile = _x select 7;
-		_File = "scripts\fasttrade\" + _afile + ".sqf";
+		_File = "ZSC\actions\" + _afile + ".sqf";
 			
 		_count = 0;
 		if(_type == "CfgVehicles") then {

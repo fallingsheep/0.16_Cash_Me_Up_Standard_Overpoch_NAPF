@@ -1,29 +1,5 @@
 // Epoch Admin Lists
 
-//Super Admins
-SuperAdminList = [
-"76561198087015545", // <Your In-Game Name here>
-"120958982" // <S-Admin In-Game Name>
-];
-//Admins
-AdminList = [
-"76561198087015545", // <Admin In-Game Name>
-"999999999" // <Admin In-Game Name>
-];
-//Mods
-ModList = [
-"76561198087015545", // <Moderator In-Game Name>
-"999999999" // <Moderator In-Game Name>
-];
-
-
-//set adminlist to be all admins
-AdminList = AdminList + SuperAdminList; 
-//Manage Doors Admins
-DoorAdminList = AdminList;
-//ADMIN BUILD
-WG_adminBuild = AdminList;
-Admin_Crafting = AdminList;
 /*
 	Broadcasts a message to the super admins when the admin tools are used.
 	Default: false

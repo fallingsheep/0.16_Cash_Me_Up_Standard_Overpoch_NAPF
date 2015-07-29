@@ -19,6 +19,9 @@ If(DeployBikeScript)then{
 } else {
 	DEPLOY_BIKE = [];
 };
+DZGMCLICK = [
+	["ItemRadio","Group Management","[]execVM 'scripts\dzgm\loadGroupManagement.sqf';","true"]
+];
 If(craftingScript)then{
 	CRAFTING = [
 		["ItemMachete","Clear Grass","[] execVM 'scripts\crafting\clearbrush.sqf';","true"],
@@ -111,4 +114,4 @@ ALCHEMY = [
 } else {
 	ALCHEMY = [];
 };
-DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE + BINOCULAR + CAREPACKAGESELF +CAREPACKAGEMAP + HARVEST + WALKDEAD + ALCHEMY;
+DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE + BINOCULAR + CAREPACKAGESELF +CAREPACKAGEMAP + HARVEST + WALKDEAD + ALCHEMY + DZGMCLICK;

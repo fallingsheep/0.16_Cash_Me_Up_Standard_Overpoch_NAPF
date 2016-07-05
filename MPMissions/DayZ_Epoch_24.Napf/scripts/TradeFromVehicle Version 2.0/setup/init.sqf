@@ -16,11 +16,11 @@ TFV_DEBUG = false;  //Debug
 
 
 // This is in a * Multiplier to 100*1 = 100, 100*0.5 = 50, 100*0.75 = 75 25% Tax,100*0.25 = 25 75% Tax.
-TFV_TAX = true;
-TFV_TAXFV = 0.75; // Tax From Veichle 25%
-TFV_TAXFVT = "25"; // Dispay Tax Veichle (lazy code TBH)
-TFV_TAXFB= 0.85; // Tax From Backpack 15%
-TFV_TAXFBT= "15"; // Dispay Tax Backpack (lazy code TBH)
+TFV_TAX = false;
+TFV_TAXFV = 0; // Tax From Veichle 25%
+TFV_TAXFVT = "0"; // Dispay Tax Veichle (lazy code TBH)
+TFV_TAXFB= 0; // Tax From Backpack 15%
+TFV_TAXFBT= "0"; // Dispay Tax Backpack (lazy code TBH)
 
 // * When using the "Trade All Items" action, it uses the average of TFV_MIPS and TFV_WIPS to calculate the required amount of stages.
 

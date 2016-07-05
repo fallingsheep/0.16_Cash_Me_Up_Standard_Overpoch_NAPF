@@ -122,10 +122,10 @@ if (!isDedicated) then {
 	zombie_loiter = 			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\zombie_loiter.sqf";			//Server compile, used for loiter behaviour
 	
 	//Recruit Survivors
-	zombie_generate = compile preprocessFileLineNumbers "fixes\zombie_generate.sqf";
+	zombie_generate = compile preprocessFileLineNumbers "scripts\walkers\zombie_generate.sqf";
 	//zombie_generate = 			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\zombie_generate.sqf";			//Server compile, used for loiter behaviour
 	
-	wild_spawnZombies = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\wild_spawnZombies.sqf";			//Server compile, used for loiter behaviour
+	wild_spawnZombies = 		compile preprocessFileLineNumbers "scripts\walkers\wild_spawnZombies.sqf";			//Server compile, used for loiter behaviour
 
 	pz_attack = 				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\pzombie\pz_attack.sqf";
 
@@ -173,7 +173,7 @@ if (!isDedicated) then {
 	//ui
 	player_selectSlot =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\ui_selectSlot.sqf";
 	player_gearSync	=			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_gearSync.sqf";
-	player_gearSet	=			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_gearSet.sqf";
+	player_gearSet	=			compile preprocessFileLineNumbers "ZSC\compiles\player_gearSet.sqf";
 	ui_changeDisplay = 			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\ui_changeDisplay.sqf";
 	ui_gear_sound =             compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\ui_gear_sound.sqf";
 	

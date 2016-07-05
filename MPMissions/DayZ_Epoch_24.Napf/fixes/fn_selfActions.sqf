@@ -1500,3 +1500,13 @@ if(GambleingScript) then {
 		s_player_gamble2 = -1;
 	};
 };
+//DOG
+if (_cursorTarget isKindOF "Land_psi_bouda") then {
+		if (s_player_getdog  < 0) then {
+			s_player_getdog = player addAction ["<t color='#0059FF'>Get Dog</t>", "addin\dogInit.sqf",_cursorTarget, 1, true, true, "", ""];		
+		};
+	} else {
+		
+		player removeAction s_player_getdog;
+		s_player_getdog = -1;
+	}; 

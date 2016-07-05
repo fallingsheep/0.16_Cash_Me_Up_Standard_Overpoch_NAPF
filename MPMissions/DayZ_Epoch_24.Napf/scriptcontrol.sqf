@@ -1,13 +1,30 @@
 //Script Control - Allows you to customize the repack by turning certain scripts on or off - true = on /false = off
 
 
+//Super Admins
+SuperAdminList = [
+"12", // <Your In-Game Name here>
+"12" // <S-Admin In-Game Name>
+];
+//Admins
+AdminList = [
+"12", // <Admin In-Game Name>
+"12" // <Admin In-Game Name>
+];
+//Mods
+ModList = [
+"12", // <Moderator In-Game Name>
+"12" // <Moderator In-Game Name>
+];
+
+
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
 server_name = "0.16 NAPF"; //Watermark Text
 //Slow zombies
 walkerZombieScript = true;
 //Gambling ( Slotmachine, Guessing Game)
-GambleingScript = false; // NO NAPF CASINO YET
+GambleingScript = true; // NO NAPF CASINO YET
 //No Voice Inside chat
 noVoicesidescript = true;
 //Intro Music
@@ -116,7 +133,14 @@ GroundFogScript = true;
 JAEMScript = true;
 //Advanced Alchemy Building
 AdvancedAlchemyScript = true;
-
+//Mining Script
+Miningscript = true;
+//Deadbody markers
+deadbodyscript = true;
+//Dogs
+dogscript = true;
+//Fishing 
+Fishingscript = true;
 
 //CUSTOM BUILDINGS
 
@@ -173,8 +197,17 @@ if (isServer) then {
 };
 
 // DO NOT CHANGE THIS!!
+
+//set adminlist to be all admins
+AdminList = AdminList + SuperAdminList; 
+//Manage Doors Admins
+DoorAdminList = AdminList;
+//ADMIN BUILD
+WG_adminBuild = AdminList;
+Admin_Crafting = AdminList;
+
 //Repack version 
 REPACKMOD = "0.16 Overpoch NAPF"; 
-BUILDNUMBER = "8";
+BUILDNUMBER = "30";
 
 

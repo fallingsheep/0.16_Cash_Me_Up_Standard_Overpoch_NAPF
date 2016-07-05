@@ -51,6 +51,7 @@ class cinderblocks {type = "trade_items";buy[] = {9000,"Coins"};sell[] = {5000,"
 class sun_shade_kit {type = "trade_items";buy[] = {10000,"Coins"};sell[] = {5000,"Coins"};};
 class park_bench_kit {type = "trade_items";buy[] = {5000,"Coins"};sell[] = {2000,"Coins"};};
 class fuel_pump_kit {type = "trade_items";buy[] = {500000,"Coins"};sell[] = {250000,"Coins"};};
+class itemoilbarrel{type = "trade_items";buy[] = {500000,"Coins"};sell[] = {250000,"Coins"};};
 };
 
 

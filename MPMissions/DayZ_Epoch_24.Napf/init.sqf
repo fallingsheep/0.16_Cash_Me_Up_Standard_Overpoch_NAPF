@@ -5,7 +5,7 @@
 
 //Recruit Survivors
 DBGroupsStarted = false;
-DBMaxSurvivors = 5; // change this to the number of survivors you want, the more you add the lower your server and client FPS
+DBMaxSurvivors = 40; // change this to the number of survivors you want, the more you add the lower your server and client FPS
 startLoadingScreen ["","RscDisplayLoadCustom"];
 cutText ["","BLACK OUT"];
 enableSaving [false, false];
@@ -39,6 +39,8 @@ dayz_maxLocalZombies = 10; // Default = 30
 
 dayz_fullMoonNights = true;
 
+MaxMineVeins = 500; 
+
 dayz_spawnselection = 0;
 dayz_paraSpawn = false;
 dayz_poleSafeArea = 50; //zombie free plot poles
@@ -49,9 +51,9 @@ dayz_sellDistance_vehicle = 10;
 dayz_sellDistance_boat = 30;
 dayz_sellDistance_air = 40;
 
-dayz_maxAnimals = 5; // Default: 8
+dayz_maxAnimals = 25; // Default: 8
 dayz_tameDogs = true;
-DynamicVehicleDamageLow = 0; // Default: 0
+DynamicVehicleDamageLow = 20; // Default: 0
 DynamicVehicleDamageHigh = 100; // Default: 100
 
 DZE_BuildOnRoads = true; // Default: False
@@ -66,18 +68,18 @@ DZE_DeathMsgTitleText = true;
 DZE_DeathMsgSide = true;
 DZE_BackpackGuard = false; //Default = true, true to enable, false to disable - wipes backpack on combat/ALT+F4 logging
 DZE_ForceNameTagsOff = false;
-DZE_R3F_WEIGHT = true; //use weight system
+DZE_R3F_WEIGHT = false; //use weight system
 DZE_PlotPole = [100,115];	
-DZE_BuildingLimit = 400;//how many items can a player build
+DZE_BuildingLimit = 1000;//how many items can a player build
 DZE_PlayerZed = false; // should players have chance of becoming a ZOMBIE when they respawn after death
 DZE_LootSpawnTimer = 10;// in minutes
 DZE_MissionLootTable = true; //Custom Loot Tables
 DZE_ConfigTrader = true;//Config based traders
 DZE_selfTransfuse = true; //Self blood bag
 DZE_selfTransfuse_Values = [
-6000, //Blood amount
- 10,  // Chance of Infection
-300 //Cooldown Timer
+8000, //Blood amount
+ 5,  // Chance of Infection
+150 //Cooldown Timer
 ];
 DZE_noRotate = []; //Objects that cannot be rotated. Ex: DZE_noRotate = ["VaultStorageLocked"]
 DZE_curPitch = 45; //Starting rotation angle. Only 1, 5, 45, or 90.
@@ -92,8 +94,8 @@ DZE_DoorsLocked = ["Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked
 ns_blowout = true;
 ns_blowout_dayz = true;
 ns_blow_delaymod = 0.74; //blowout delay
-ns_blow_itemapsi = "NVGoggles"; //ItemAPSI replacement
-ns_blow_playerdamage = 4000; // damage players without ns_blow_itemapsi can get per blowout
+ns_blow_itemapsi = "NVGoggles"; //ItemAPSI replacement 
+ns_blow_playerdamage = random 2000; // damage players without ns_blow_itemapsi can get per blowout
 ns_blow_emp = false;
 
 //Elevator
@@ -121,12 +123,20 @@ ELE_StopClass = "MetalFloor_Preview_DZ";
 //snow
 snowchance = 5; //5% chance to snow on server start/restart
 
+//Medical
+UnconsciousTime = 10; // default (random): UnconsciousTime = round((((random 2) max 0.1) * _damage) * 20);
+BleedingTime =  30;//How long to bleed for. default (random):BleedingTime =(random 300) + 30;
+BleedStandingDamage = 20; // damage per sec while standing and bleeding. default BleedStandingDamage = 30;
+BleedKneelingDamage = 10; // damage per sec while kneeling and bleeding. default BleedKneelingDamage = 15;
+BleedCrawlingDamage = 5; // damage per sec while crawling and bleeding. default BleedCrawlingDamage = 7.5;
+
+
 //Load in compiled functions
 call compile preprocessFileLineNumbers "fixes\variables.sqf";
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "fixes\publicEH.sqf";				//Initilize the publicVariable event handlers
 progressLoadingScreen 0.3;
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";	//Functions used by CLIENT for medical
+call compile preprocessFileLineNumbers "fixes\setup_functions_med.sqf";	//Functions used by CLIENT for medical
 progressLoadingScreen 0.4;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";				//Compile regular functions
 progressLoadingScreen 0.5;
@@ -163,8 +173,11 @@ if (!isDedicated) then {
 	
 	//Run the player monitor
 	if (IntroMusicScript) then {
-		 _id = player addEventHandler ["Respawn", {_id = [] spawn player_death; 
-		 [] execVM "scripts\intromusic\intromusic.sqf";}
+		 _id = player addEventHandler ["Respawn", {
+			 _id = [] spawn player_death; 
+			 [] execVM "scripts\intromusic\intromusic.sqf";
+			 _nul = [] execVM "addin\plrInit.sqf";
+			 }
 		 ];
 	}else{
 		_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
@@ -361,6 +374,21 @@ if(AdmintoolsScript)then{
 if(noVoicesidescript)then{
     call compile preprocessFileLineNumbers "scripts\noVoice.sqf";                              
 };
+if(Miningscript)then{
+	[] execVM 'scripts\mining\init.sqf';
+};
+if(deadbodyscript)then{
+	[] execVM 'scripts\deadbodymarkers.sqf';
+};
+if(dogscript)then{ 
+	if (isServer) then {
+		dogOwner = [];
+	 };
+	_nul = [] execVM "addin\vehInit.sqf";
+};
+if(Fishingscript)then{
+	[] execVM 'scripts\fishing\init.sqf';
+ };
 //Admin skin
 {
 	_adminated = _x getVariable ["adminated",0];

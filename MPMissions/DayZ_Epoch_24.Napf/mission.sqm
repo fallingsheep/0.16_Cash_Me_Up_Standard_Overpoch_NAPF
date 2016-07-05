@@ -1198,7 +1198,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=27;
+		items=26;
 		class Item0
 		{
 			position[]={10010.905,110.96082,10448.559};
@@ -1378,14 +1378,6 @@ class Mission
             position[]={6259.7646,19.9, 10045.91};
             name="BSRBANK";
             text="Central Bank";
-            type="mil_circle";
-            colorName="ColorRed";
-        };
-        class Item26
-        {
-            position[]={11175.731,19.9, 18334.029};
-            name="Casino";
-            text="Napf Casino";
             type="mil_circle";
             colorName="ColorRed";
         };

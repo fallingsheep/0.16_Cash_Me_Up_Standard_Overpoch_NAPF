@@ -6,7 +6,7 @@ private ["_squad1","_squad2","_squad3","_squad4","_squad5","_squad6","_squad7","
 
 execVM "scripts\rob\bank_config.sqf";
 sleep 0.5;
-
+_debugbank = 0;
 if(_debugBank == 1) then {
 	systemChat "[DEBUG] AI successfully executed.";
 };

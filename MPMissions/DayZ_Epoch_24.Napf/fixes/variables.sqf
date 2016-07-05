@@ -13,6 +13,8 @@ Camo1_DZ = 		"Camo1_DZ";
 Soldier1_DZ = 	"Soldier1_DZ";
 Rocket_DZ = 	"Rocket_DZ";
 
+SmeltingGoldBarsToCoinsRate = 1;
+
 AllPlayers = ["Survivor2_DZ","SurvivorWcombat_DZ","SurvivorWdesert_DZ","SurvivorWurban_DZ","SurvivorWsequishaD_DZ","SurvivorWsequisha_DZ","SurvivorWpink_DZ","SurvivorW3_DZ","SurvivorW2_DZ","Bandit1_DZ","Bandit2_DZ","BanditW1_DZ","BanditW2_DZ","Soldier_Crew_PMC","Sniper1_DZ","Camo1_DZ","Soldier1_DZ","Rocket_DZ","Rocker1_DZ","Rocker2_DZ","Rocker3_DZ","Rocker4_DZ","Priest_DZ","Functionary1_EP1_DZ","GUE_Commander_DZ","Ins_Soldier_GL_DZ","Haris_Press_EP1_DZ","Pilot_EP1_DZ","RU_Policeman_DZ","pz_policeman","pz_suit1","pz_suit2","pz_worker1","pz_worker2","pz_worker3","pz_doctor","pz_teacher","pz_hunter","pz_villager1","pz_villager2","pz_villager3","pz_priest","Soldier_TL_PMC_DZ","Soldier_Sniper_PMC_DZ","Soldier_Bodyguard_AA12_PMC_DZ","Drake_Light_DZ","CZ_Special_Forces_GL_DES_EP1_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ","FR_OHara_DZ","FR_Rodriguez_DZ","CZ_Soldier_Sniper_EP1_DZ","Graves_Light_DZ","GUE_Soldier_MG_DZ","GUE_Soldier_Sniper_DZ","GUE_Soldier_Crew_DZ","GUE_Soldier_CO_DZ","GUE_Soldier_2_DZ","TK_Special_Forces_MG_EP1_DZ","TK_Soldier_Sniper_EP1_DZ","TK_Commander_EP1_DZ","RU_Soldier_Crew_DZ","INS_Lopotev_DZ","INS_Soldier_AR_DZ","INS_Soldier_CO_DZ","INS_Bardak_DZ","INS_Worker2_DZ"];
 Clothing1 = ["FR_Ohara_DZ","FR_Miles","FR_Cooper","FR_Rodriguez_DZ","FR_Sykes","FR_AC","FR_AR","FR_Assault_GL","FR_Assault_R","FR_Commander"];
 Clothing2 = ["Soldier1_DZ","USMC_Soldier","USMC_Soldier2","USMC_SoldierM_Marksman","USMC_SoldierS","USMC_SoldierS_Sniper","USMC_Soldier_AA","USMC_Soldier_Pilot"];
@@ -337,6 +339,15 @@ dayz_resetSelfActions = {
 	s_player_clothesmenu = -1;
 	s_player_clothesmenu2 = -1;
 	s_givemoney_dialog = -1;
+	s_bank_dialog = -1;
+	s_bank_dialog2 = -1;
+	s_smelt_coins = -1;
+	s_smelt_bars = -1;
+	s_player_mining = -1;
+	s_player_mine = -1;
+	s_player_getdog = -1;
+	s_player_fishing = -1;
+	s_player_fish = -1;
 
 };
 call dayz_resetSelfActions;
@@ -1094,8 +1105,6 @@ s_player_driver_eject = -1;
 Eject_Array = [];
 Player_Vehicle_Crew_Count=0;
 
-	s_player_mining = -1;
-	s_player_mine = -1;
 	
 GlobalCraftingVariable = 1;
 GlobalComboboxVariable = 99;
@@ -1134,7 +1143,7 @@ _Carports = ["Land_Ind_SawMillPen","Land_Ind_Shed_01_EP1","Land_Ind_Shed_02_EP1"
 _CargoContainers = ["Land_Crates_EP1","Land_Misc_Cargo1Ao_EP1","Land_Misc_Cargo1Bo_EP1","Land_Misc_Cargo1E_EP1","Land_Misc_Cargo1Eo_EP1","Land_Misc_Cargo2E","Land_Misc_Cargo2E_EP1","Land_Misc_CargoMarket1a_EP1","Misc_Cargo1B_military","Land_transport_crates_EP1","MAP_drevena_bedna","MAP_metalcrate","MAP_metalcrate_02","MAP_Misc_cargo_cont_net1","MAP_Misc_cargo_cont_net2","MAP_Misc_cargo_cont_net3","MAP_Misc_cargo_cont_small","MAP_Misc_cargo_cont_small2","MAP_Misc_cargo_cont_tiny"];
 _ConstructionSite = ["Land_Ind_BoardsPack1","Land_Ind_BoardsPack2","Land_Misc_Coil_EP1","Land_Misc_ConcOutlet_EP1","Land_Misc_ConcPipeline_EP1","Land_Misc_GContainer_Big","Land_Wheel_cart_EP1","MAP_P_cihly1","MAP_P_cihly2","MAP_P_cihly3","MAP_P_cihly4","MAP_P_pipe_big","MAP_P_pipe_small","MAP_P_ytong","MAP_paletaA","MAP_paletyC","MAP_paletyD","MAP_Pallets_Column","MAP_Misc_G_Pipes","MAP_Misc_palletsfoiled","MAP_Misc_palletsfoiled_heap","Misc_concrete","MAP_Ind_Timbers","MAP_P_Stavebni_kozy","MAP_P_bedna","MAP_garbage_misc","MAP_garbage_paleta","MAP_Misc_TyreHeap","MAP_pneu"];
 _MiscLarge = ["Land_Ind_TankSmall","Land_Ind_TankSmall2","Land_Fuel_tank_big","Land_Fuel_tank_stairs","Land_Misc_ConcBox_EP1","LandLadder","MAP_AirCond_big","MAP_AirCond_small","MAP_AirCondition_A","MAP_AirCondition_B","Land_Antenna","MAP_antenna_big_roof","MAP_antenna_small_roof","MAP_antenna_small_roof_1","MAP_bouda_plech","MAP_drevo_hromada","MAP_kasna_new","MAP_kulna","MAP_Misc_Greenhouse","MAP_Misc_Hutch","MAP_PowerGenerator","Pile_of_wood","MAP_Misc_WoodPile","Loudspeakers_EP1","MAP_misc_amplion_conc"];
-_MiscSmall = ["Axe_woodblock","Garbage_can","Garbage_container","MAP_popelnice","Haystack_small","Land_cages_EP1","Land_Campfire_burning","Land_transport_cart_EP1","MAP_ChickenCoop","MAP_fire","MAP_GasMeterExt","MAP_KBud","MAP_Misc_Boogieman","MAP_Misc_loudspeakers","MAP_Misc_PostBox","MAP_parabola_big","MAP_phone_box","MAP_psi_bouda","MAP_snowman","MAP_Sphere","MAP_Sphere2","MAP_Toilet","MAP_Piskoviste","MAP_Houpacka","MAP_brana","TargetPopUpTarget","TargetEpopup","TargetE"];
+_MiscSmall = ["Land_psi_bouda","Axe_woodblock","Garbage_can","Garbage_container","MAP_popelnice","Haystack_small","Land_cages_EP1","Land_Campfire_burning","Land_transport_cart_EP1","MAP_ChickenCoop","MAP_fire","MAP_GasMeterExt","MAP_KBud","MAP_Misc_Boogieman","MAP_Misc_loudspeakers","MAP_Misc_PostBox","MAP_parabola_big","MAP_phone_box","MAP_psi_bouda","MAP_snowman","MAP_Sphere","MAP_Sphere2","MAP_Toilet","MAP_Piskoviste","MAP_Houpacka","MAP_brana","TargetPopUpTarget","TargetEpopup","TargetE"];
 _Scaffolding = ["Land_A_Castle_Stairs_A","MAP_leseni2x","MAP_leseni4x","MAP_Misc_Scaffolding"];
 _Sunshades = ["Land_covering_hut_EP1","Land_covering_hut_big_EP1","Land_Market_shelter_EP1","Land_sunshade_EP1","MAP_Camo_Box","MAP_CamoNet_EAST","MAP_CamoNet_EAST_var1","MAP_CamoNetB_EAST","MAP_CamoNet_NATO","MAP_CamoNet_NATO_var1","MAP_CamoNetB_NATO","MAP_Pristresek","MAP_stanek_3","MAP_stanek_3B","MAP_stanek_3_d"];
 _Emerald = _Barrels + _Carports + _CargoContainers + _ConstructionSite + _MiscLarge + _MiscSmall + _Scaffolding + _Sunshades;

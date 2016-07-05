@@ -4,6 +4,8 @@ DZE_ActionInProgress = true;
 
 if ("ItemFuelBarrelEmpty" in magazines player) then {
 	player playActionNow "Medic";
+	cutText [format["Filling Barrel.."], "PLAIN DOWN"];
+	sleep 10;
 	//remove empty barrel
 	player removeMagazine "ItemFuelBarrelEmpty";
 	//add full barrel

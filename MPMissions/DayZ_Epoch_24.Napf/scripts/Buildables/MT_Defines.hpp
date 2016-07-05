@@ -571,7 +571,7 @@ class Custom_Buildables {
 	class MAP_Misc_PostBox:DefaultEmerald {};
 	class MAP_parabola_big:DefaultEmerald {};	
 	class MAP_phone_box:DefaultEmerald {};
-	class MAP_psi_bouda:DefaultEmerald {};
+	class Land_psi_bouda:DefaultEmerald {};
 	class MAP_snowman:DefaultEmerald {};
 	class MAP_Sphere:DefaultEmerald {};
 	class MAP_Sphere2:DefaultEmerald {};

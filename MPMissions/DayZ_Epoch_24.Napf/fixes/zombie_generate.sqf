@@ -152,7 +152,7 @@ if ((dayz_spawnZombies < _maxControlledZombies) && (dayz_CurrentNearByZombies < 
 		publicVariableServer "PVDZE_Server_Simulation";
 
 		//Start behavior
-		_id = [_position,_agent] execFSM "\z\AddOns\dayz_code\system\zombie_agent.fsm";
+		_id = [_position,_agent] execFSM "scripts\walkers\zombie_agent.fsm";
 		_agent addRating -1000000;
 	};
 };

@@ -8,7 +8,7 @@ private ["_unit","_player","_humanity","_banditkills"];
 _unit = _this select 0;
 _player = _this select 1;
 
-_CASH = ((random 10) * 10000);
+_CASH = ((random 10) * 1000);
 _unit setVariable ["cashMoney",_CASH, true];
 
 //If the killer is a player, lets handle the humanity

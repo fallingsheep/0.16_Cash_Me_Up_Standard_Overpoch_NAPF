@@ -14,7 +14,7 @@ _unitGroup = _this select 2;
 _unitType = _this select 3;
 _unitsAlive = if ((count _this) > 4) then {_this select 4} else {0};
 
-_CASH = ((random 10) * 10000);
+_CASH = ((random 10) * 1000);
 _victim setVariable ["cashMoney",_CASH, true];
 if (isPlayer _killer) then {
 

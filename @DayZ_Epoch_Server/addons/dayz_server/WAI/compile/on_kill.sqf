@@ -25,7 +25,7 @@ if (isServer) then {
 	};
 	_unit setVariable ["killedat", time];
 	
-	_CASH = ((random 10) * 10000);
+	_CASH = ((random 10) * 1000);
 _unit setVariable ["cashMoney",_CASH, true];
 
 	if(ai_add_skin) then {

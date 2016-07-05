@@ -122,9 +122,11 @@ if (!isDedicated) then {
 	zombie_loiter = 			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\zombie_loiter.sqf";			//Server compile, used for loiter behaviour
 	
 	//Recruit Survivors
-	zombie_generate = compile preprocessFileLineNumbers "scripts\walkers\zombie_generate.sqf";
-	//zombie_generate = 			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\zombie_generate.sqf";			//Server compile, used for loiter behaviour
-	
+	if (walkerZombieScript) then{
+		zombie_generate = compile preprocessFileLineNumbers "scripts\walkers\zombie_generate.sqf";
+	}else{
+		zombie_generate = 			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\zombie_generate.sqf";			//Server compile, used for loiter behaviour
+	};
 	wild_spawnZombies = 		compile preprocessFileLineNumbers "scripts\walkers\wild_spawnZombies.sqf";			//Server compile, used for loiter behaviour
 
 	pz_attack = 				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\pzombie\pz_attack.sqf";

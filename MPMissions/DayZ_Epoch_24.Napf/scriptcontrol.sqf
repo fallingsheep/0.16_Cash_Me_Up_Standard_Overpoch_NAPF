@@ -258,6 +258,6 @@ Admin_Crafting = AdminList;
 
 //Repack version 
 REPACKMOD = "0.16 Overpoch NAPF"; 
-BUILDNUMBER = "30";
+BUILDNUMBER = "41";
 
 

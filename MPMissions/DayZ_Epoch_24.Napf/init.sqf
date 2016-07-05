@@ -5,7 +5,7 @@
 
 //Recruit Survivors
 DBGroupsStarted = false;
-DBMaxSurvivors = 40; // change this to the number of survivors you want, the more you add the lower your server and client FPS
+DBMaxSurvivors = 5; // change this to the number of survivors you want, the more you add the lower your server and client FPS
 startLoadingScreen ["","RscDisplayLoadCustom"];
 cutText ["","BLACK OUT"];
 enableSaving [false, false];
@@ -39,7 +39,7 @@ dayz_maxLocalZombies = 10; // Default = 30
 
 dayz_fullMoonNights = true;
 
-MaxMineVeins = 500; 
+MaxMineVeins = 50; 
 
 dayz_spawnselection = 0;
 dayz_paraSpawn = false;
@@ -51,7 +51,7 @@ dayz_sellDistance_vehicle = 10;
 dayz_sellDistance_boat = 30;
 dayz_sellDistance_air = 40;
 
-dayz_maxAnimals = 25; // Default: 8
+dayz_maxAnimals = 8; // Default: 8
 dayz_tameDogs = true;
 DynamicVehicleDamageLow = 20; // Default: 0
 DynamicVehicleDamageHigh = 100; // Default: 100
@@ -68,7 +68,7 @@ DZE_DeathMsgTitleText = true;
 DZE_DeathMsgSide = true;
 DZE_BackpackGuard = false; //Default = true, true to enable, false to disable - wipes backpack on combat/ALT+F4 logging
 DZE_ForceNameTagsOff = false;
-DZE_R3F_WEIGHT = false; //use weight system
+DZE_R3F_WEIGHT = true; //use weight system
 DZE_PlotPole = [100,115];	
 DZE_BuildingLimit = 1000;//how many items can a player build
 DZE_PlayerZed = false; // should players have chance of becoming a ZOMBIE when they respawn after death

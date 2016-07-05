@@ -1,8 +1,8 @@
 
 LOG_CFG_lANG = "en"; 				/*  en = english , de = german , fr = french  */
 LOG_CFG_ALLOW_LOCKED = true;	 	/* allow to transport locked vehicles */
-LOG_CFG_ALLOW_CHAINING = true; 	/* allow chain towing  */
-LOG_CFG_ALLOW_GETIN = true; 		/* allow player to get into a towed / lifted object  */
+LOG_CFG_ALLOW_CHAINING = false; 	/* allow chain towing  */
+LOG_CFG_ALLOW_GETIN = false; 		/* allow player to get into a towed / lifted object  */
 
 
 /*--------------------------------------------------------------------------------------------------------------

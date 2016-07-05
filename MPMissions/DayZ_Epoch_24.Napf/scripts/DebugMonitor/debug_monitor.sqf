@@ -6,7 +6,7 @@ fnc_debug = {
 
 	while {debugMonitor} do {
 	
-		//Area
+		//Show Area
 		_nearestCity = nearestLocations [getPos player, ["NameCityCapital","NameCity","NameVillage","NameLocal"],650];
 		_textCity = "Wilderness";
 		
@@ -16,14 +16,9 @@ fnc_debug = {
 			}else{
 				_textCity = text (_nearestCity select 0);
 			};
-		 };    
-
+		 };    	
 		
-		
-		
-		
-		
-		//Title
+		//hero / Bandit titles 
 		_currentHUM = (player getVariable["humanity",0]);
 		_title = "Survivor";
 		if (_currentHUM > 30000) then {

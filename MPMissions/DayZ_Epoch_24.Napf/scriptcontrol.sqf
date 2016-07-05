@@ -1,26 +1,57 @@
 //Script Control - Allows you to customize the repack by turning certain scripts on or off - true = on /false = off
 
+//////////////////////////
+//		Settings		//
+//////////////////////////
+//Server name for watermark
+server_name = "0.16 NAPF"; //Watermark Text
+//Debris
+MaxDynamicDebris = 100; // max number of junk that can spawn randomly on map
+//Vehicles
+MaxVehicleLimit = 50; //max number of vehicles that can spawn randomly on map
+//player zombies
+DZE_PlayerZed = false; // should players have chance of becoming a ZOMBIE when they respawn after death
+//Recruit Survivors
+DBMaxSurvivors = 5; // change this to the number of survivors you want, the more you add the lower your server and client FPS
+//Full Moon Nights
+dayz_fullMoonNights = true; // full moons at night
+//Mining Veins
+MaxMineVeins = 50; // max ore veins on map
+//Animals
+dayz_maxAnimals = 8; // max wild animals
+dayz_tameDogs = true; // can dogs be tamed
+//Weight
+DZE_R3F_WEIGHT = true; //use weight system
+//snow
+snowchance = 5; //5% chance to snow on server start/restart
+//Building / Plot / loot
+DZE_LootSpawnTimer = 10;// how long before loot respawns in minutes 
+DZE_BuildingLimit = 1000;//how many items can a player build
+dayz_poleSafeArea = 50; //zombie free plot poles area size
+DZE_BuildOnRoads = true; //can players build on roads
+DZE_PlotPole = [100,100];	// size of plot pole area
+//Medical
+UnconsciousTime = 10; // default (random): UnconsciousTime = round((((random 2) max 0.1) * _damage) * 20);
+BleedingTime =  30;//How long to bleed for. default (random):BleedingTime =(random 300) + 30;
+BleedStandingDamage = 20; // damage per sec while standing and bleeding. default BleedStandingDamage = 30;
+BleedKneelingDamage = 10; // damage per sec while kneeling and bleeding. default BleedKneelingDamage = 15;
+BleedCrawlingDamage = 5; // damage per sec while crawling and bleeding. default BleedCrawlingDamage = 7.5;
+DZE_selfTransfuse = true; //Self blood bag
+DZE_selfTransfuse_Values = [
+8000, //Blood amount
+ 5,  // Chance of Infection
+150 //Cooldown Timer
+];
+//EVR 
+ns_blow_playerdamage = random 2000; // damage players take when blowout happens and they unprotected
+ns_blow_itemapsi = "NVGoggles"; //if player has this item they dont take damage form EVR
 
-//Super Admins
-SuperAdminList = [
-"12", // <Your In-Game Name here>
-"12" // <S-Admin In-Game Name>
-];
-//Admins
-AdminList = [
-"12", // <Admin In-Game Name>
-"12" // <Admin In-Game Name>
-];
-//Mods
-ModList = [
-"12", // <Moderator In-Game Name>
-"12" // <Moderator In-Game Name>
-];
-
+///////////////////////////////
+//		Scripts ON/OFF		//
+//////////////////////////////
 
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
-server_name = "0.16 NAPF"; //Watermark Text
 //Slow zombies
 walkerZombieScript = true;
 //Gambling ( Slotmachine, Guessing Game)
@@ -141,6 +172,25 @@ deadbodyscript = true;
 dogscript = true;
 //Fishing 
 Fishingscript = true;
+//////////////////////////
+//		ADMIN LISTS		//
+//////////////////////////
+//Super Admins
+SuperAdminList = [
+"12", // <Your In-Game Name here>
+"12" // <S-Admin In-Game Name>
+];
+//Admins
+AdminList = [
+"12", // <Admin In-Game Name>
+"12" // <Admin In-Game Name>
+];
+//Mods
+ModList = [
+"12", // <Moderator In-Game Name>
+"12" // <Moderator In-Game Name>
+];
+
 
 //CUSTOM BUILDINGS
 

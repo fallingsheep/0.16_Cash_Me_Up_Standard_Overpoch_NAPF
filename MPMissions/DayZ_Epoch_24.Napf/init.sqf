@@ -3,9 +3,7 @@
 	Addons Credits: Jetski Yanahui by Kol9yN, Zakat, Gerasimow9, YuraPetrov, zGuba, A.Karagod, IceBreakr, Sahbazz
 */
 
-//Recruit Survivors
 DBGroupsStarted = false;
-DBMaxSurvivors = 5; // change this to the number of survivors you want, the more you add the lower your server and client FPS
 startLoadingScreen ["","RscDisplayLoadCustom"];
 cutText ["","BLACK OUT"];
 enableSaving [false, false];
@@ -26,40 +24,23 @@ enableRadio false;
 // May prevent "how are you civillian?" messages from NPC
 enableSentences false;
 
-
-
 // DayZ Epoch config
 spawnShoremode = 0;
 spawnArea= 1500; // Default = 1500
 setTerrainGrid 50;    //Grass (Hi)12.5 or 25(Med/standard) or 50(Low/off)
-MaxVehicleLimit = 300; // Default = 50
-MaxDynamicDebris = 500; // Default = 100
 dayz_MapArea = 25000; // Default = 10000
 dayz_maxLocalZombies = 10; // Default = 30 
-
-dayz_fullMoonNights = true;
-
-MaxMineVeins = 50; 
-
 dayz_spawnselection = 0;
 dayz_paraSpawn = false;
-dayz_poleSafeArea = 50; //zombie free plot poles
 dayz_minpos = -1000; 
 dayz_maxpos = 26000;
-
 dayz_sellDistance_vehicle = 10;
 dayz_sellDistance_boat = 30;
 dayz_sellDistance_air = 40;
-
-dayz_maxAnimals = 8; // Default: 8
-dayz_tameDogs = true;
 DynamicVehicleDamageLow = 20; // Default: 0
 DynamicVehicleDamageHigh = 100; // Default: 100
-
-DZE_BuildOnRoads = true; // Default: False
-
 DZE_requireplot = 1;
-DZE_teleport = [14000,14000,14000,14000,14000];
+DZE_teleport = [14000,14000,14000,14000,14000];//needed for admin teleport
 DZE_StaticConstructionCount = 1;
 DZE_FriendlySaving = true;
 DZE_TRADER_SPAWNMODE = false;
@@ -68,24 +49,12 @@ DZE_DeathMsgTitleText = true;
 DZE_DeathMsgSide = true;
 DZE_BackpackGuard = false; //Default = true, true to enable, false to disable - wipes backpack on combat/ALT+F4 logging
 DZE_ForceNameTagsOff = false;
-DZE_R3F_WEIGHT = true; //use weight system
-DZE_PlotPole = [100,115];	
-DZE_BuildingLimit = 1000;//how many items can a player build
-DZE_PlayerZed = false; // should players have chance of becoming a ZOMBIE when they respawn after death
-DZE_LootSpawnTimer = 10;// in minutes
 DZE_MissionLootTable = true; //Custom Loot Tables
 DZE_ConfigTrader = true;//Config based traders
-DZE_selfTransfuse = true; //Self blood bag
-DZE_selfTransfuse_Values = [
-8000, //Blood amount
- 5,  // Chance of Infection
-150 //Cooldown Timer
-];
 DZE_noRotate = []; //Objects that cannot be rotated. Ex: DZE_noRotate = ["VaultStorageLocked"]
 DZE_curPitch = 45; //Starting rotation angle. Only 1, 5, 45, or 90.
 
 //Door Mangement
-
 AllowManualCode = true;// 2 reason| 1: Allows breaking codes (if 2nd config = false and code = 3 digits) | 2: Friends can access access not owned doors until owner gets on.
 HarderPenalty = true;// Cen's Penalty: Flashes screen white. And kicks player to lobby if failed more then (random number between 4 and 14) times.
 DZE_DoorsLocked = ["Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked","Land_DZE_WoodDoorLocked","CinderWallDoorLocked_DZ","CinderWallDoorSmallLocked_DZ"];
@@ -94,8 +63,6 @@ DZE_DoorsLocked = ["Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked
 ns_blowout = true;
 ns_blowout_dayz = true;
 ns_blow_delaymod = 0.74; //blowout delay
-ns_blow_itemapsi = "NVGoggles"; //ItemAPSI replacement 
-ns_blow_playerdamage = random 2000; // damage players without ns_blow_itemapsi can get per blowout
 ns_blow_emp = false;
 
 //Elevator
@@ -108,7 +75,6 @@ ELE_RequiredBuildItems = [["PartGeneric",4], "PartEngine", "ItemGenerator", "Ite
 ELE_RequiredBuildStopItems = [["PartGeneric",4]]; // required items to build an elevator stop
 ELE_StopClass = "MetalFloor_Preview_DZ";
 
-
 	EpochEvents = [
 	["any","any","any","any",30,"crash_spawner"],
 	["any","any","any","any",0,"crash_spawner"],
@@ -120,16 +86,6 @@ ELE_StopClass = "MetalFloor_Preview_DZ";
 	["any","any","any","any",40,"Supplyitems"], 
 	["any","any","any","any",55,"Construction"]
 	];
-//snow
-snowchance = 5; //5% chance to snow on server start/restart
-
-//Medical
-UnconsciousTime = 10; // default (random): UnconsciousTime = round((((random 2) max 0.1) * _damage) * 20);
-BleedingTime =  30;//How long to bleed for. default (random):BleedingTime =(random 300) + 30;
-BleedStandingDamage = 20; // damage per sec while standing and bleeding. default BleedStandingDamage = 30;
-BleedKneelingDamage = 10; // damage per sec while kneeling and bleeding. default BleedKneelingDamage = 15;
-BleedCrawlingDamage = 5; // damage per sec while crawling and bleeding. default BleedCrawlingDamage = 7.5;
-
 
 //Load in compiled functions
 call compile preprocessFileLineNumbers "fixes\variables.sqf";

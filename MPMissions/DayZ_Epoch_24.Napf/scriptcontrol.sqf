@@ -172,6 +172,8 @@ deadbodyscript = true;
 dogscript = true;
 //Fishing 
 Fishingscript = true;
+//Radio Chatter
+RadioChatterScript = true;
 //////////////////////////
 //		ADMIN LISTS		//
 //////////////////////////

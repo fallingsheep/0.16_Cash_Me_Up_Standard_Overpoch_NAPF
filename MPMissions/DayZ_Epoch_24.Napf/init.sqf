@@ -25,6 +25,7 @@ enableRadio false;
 enableSentences false;
 
 // DayZ Epoch config
+heliLift = true; // for dogs
 spawnShoremode = 0;
 spawnArea= 1500; // Default = 1500
 setTerrainGrid 50;    //Grass (Hi)12.5 or 25(Med/standard) or 50(Low/off)
@@ -143,7 +144,11 @@ if (!isDedicated) then {
 	execVM "ZSC\compiles\playerHud.sqf";
 	//ESS V2
 	execVM "scripts\spawn\start.sqf";
-	
+	//Radio chatter
+	if (RadioChatterScript) then{
+		//msgChance,sleepTimer,DayZ 1.8 users set to true
+		[0.15, 600, false] execVM "scripts\radioChatter.sqf";
+	};
 
 	
 if (((getPlayerUID player) in AdminList)||((getPlayerUID player) in ModList))then{

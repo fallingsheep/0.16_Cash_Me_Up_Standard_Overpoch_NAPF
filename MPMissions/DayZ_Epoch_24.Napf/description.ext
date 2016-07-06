@@ -1432,6 +1432,30 @@ class DayZ_loadingScreen
 };
 class CfgSounds
 {	
+	class radio1
+	{
+		name="radio1";
+		sound[]={sounds\radio1.ogg, 0.3, 1};
+		titles[] = {};
+	};
+	class radio2
+	{
+		name="radio2";
+		sound[]={sounds\radio2.ogg, 0.3, 1};
+		titles[] = {};
+	};
+	class radio3
+	{
+		name="radio3";
+		sound[]={sounds\radio3.ogg, 0.3, 1};
+		titles[] = {};
+	};
+	class radio4
+	{
+		name="radio4";
+		sound[]={sounds\radio4.ogg, 0.3, 1};
+		titles[] = {};
+	};
 	class Vas_yessir;	
 	class horde_sound_turning_page: Vas_yessir
 	{

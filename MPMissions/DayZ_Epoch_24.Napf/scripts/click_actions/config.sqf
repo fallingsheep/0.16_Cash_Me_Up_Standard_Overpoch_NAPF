@@ -77,6 +77,13 @@ CAREPACKAGESELF = [
 } else {
 	CAREPACKAGESELF = [];
 };
+If(LocateVehicleScript)then{
+LOCATEVEHICLE = [
+	["ItemMap","Locate Vehicle","[] execVM 'scripts\locate_vehicle.sqf';","true"]
+	];
+} else {
+	LOCATEVEHICLE = [];
+};
 If(carepackageMAPScript)then{
 CAREPACKAGEMAP = [
 	["ItemBriefcase100oz","Call Carepackage (On Map)","[] execVM 'scripts\Carepackage2\clickpackage.sqf';","true"]
@@ -114,4 +121,4 @@ ALCHEMY = [
 } else {
 	ALCHEMY = [];
 };
-DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE + BINOCULAR + CAREPACKAGESELF +CAREPACKAGEMAP + HARVEST + WALKDEAD + ALCHEMY + DZGMCLICK;
+DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE + BINOCULAR + CAREPACKAGESELF + LOCATEVEHICLE + CAREPACKAGEMAP + HARVEST + WALKDEAD + ALCHEMY + DZGMCLICK;

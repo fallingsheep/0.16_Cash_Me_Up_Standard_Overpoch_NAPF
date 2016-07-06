@@ -106,6 +106,30 @@ _body setVariable["combattimeout", 0, true];
 //["dayzFlies",player] call broadcastRpcCallAll;
 sleep 2;
 
+//Callous Gaming Death Camera
+_body spawn {
+	"colorCorrections" ppEffectEnable true;"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 0.1],  [1, 1, 1, 0.0]];
+	"colorCorrections" ppEffectCommit 0;
+	"dynamicBlur" ppEffectEnable true;
+	"dynamicBlur" ppEffectAdjust [2]; 
+	"dynamicBlur" ppEffectCommit 0;
+	showCinemaBorder true;
+	camUseNVG false;
+	playSound "heartbeat_1";
+	CG_CAM = "camera" camCreate [(getPosATL _this select 0), (getPosATL _this select 1),(getPosATL _this select 2)+4];
+	CG_CAM cameraEffect ["internal","back"];
+	
+	CG_CAM camSetFOV 2;
+	CG_CAM camSetTarget (vehicle _this);
+	CG_CAM camCommit 0;
+	waitUntil {camCommitted CG_CAM};
+	sleep 3;
+	CG_CAM camSetTarget [(getPosATL _this select 0), (getPosATL _this select 1),(getPosATL _this select 2)+800];
+	CG_CAM camSetRelPos [0,5,0];
+	CG_CAM camCommit 80;
+};
+sleep 10; // allow camera zoom
+
 100 cutRsc ["DeathScr","BLACK OUT",3];
 
 playMusic "dayz_track_death_1";

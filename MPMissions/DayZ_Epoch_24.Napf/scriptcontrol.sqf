@@ -62,6 +62,9 @@ DZE_crashLootConfig = [false,2,5,5,0];  // to disable loot when explodes set it 
 //		Scripts ON/OFF		//
 //////////////////////////////
 
+
+//locate vehicles on map
+LocateVehicleScript = true;
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
 //Convoys

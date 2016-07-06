@@ -56,7 +56,7 @@ select 3 =  Radius around crash site to drop loot ("Default: 5")m out of Max amo
 select 4 = Chance of gear being destroyed (Between 0-1, Ex: 0 = Never lost, 0.5 = Half lost, 1 = All lost)
 Default: DZE_crashLootConfig = [true,2,5,5,0];
 */
-DZE_crashLootConfig = [false,2,5,5,0]; 
+DZE_crashLootConfig = [false,2,5,5,0];  // to disable loot when explodes set it to [false0,0,0,0]
 
 ///////////////////////////////
 //		Scripts ON/OFF		//
@@ -66,6 +66,8 @@ DZE_crashLootConfig = [false,2,5,5,0];
 WaterMarkScript = true; //Watermark on/off
 //Convoys
 ConvoyScript = true;
+//Hot wire safes
+HotwireSafeScript = true;
 //Slow zombies
 walkerZombieScript = true;
 //Gambling ( Slotmachine, Guessing Game)

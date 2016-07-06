@@ -784,7 +784,9 @@ if((_typeOfCursorTarget in DZE_DoorsLocked)) then {
 			} else {
 				if(_characterID != dayz_combination && _ownerID != _playerUID) then {
 					if(_hasHotwireKit) then {
-						 s_player_hotwirevault = player addaction [("<t color=""#B40404"">" + ("Hotwire Vault") +"</t>"), "Path_To\vault_hotwire.sqf",_cursorTarget, 0, false, true, "", ""];
+						if (HotwireSafeScript)then{ 
+							s_player_hotwirevault = player addaction [("<t color=""#B40404"">" + ("Hotwire Vault") +"</t>"), "Path_To\vault_hotwire.sqf",_cursorTarget, 0, false, true, "", ""];
+						};
 					};
 					_combi = player addAction [localize "STR_EPOCH_ACTIONS_RECOMBO", "\z\addons\dayz_code\actions\vault_combination_1.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];

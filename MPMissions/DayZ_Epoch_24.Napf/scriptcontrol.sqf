@@ -64,6 +64,8 @@ DZE_crashLootConfig = [false,2,5,5,0];
 
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
+//Convoys
+ConvoyScript = true;
 //Slow zombies
 walkerZombieScript = true;
 //Gambling ( Slotmachine, Guessing Game)

@@ -205,7 +205,12 @@ if (((getPlayerUID player) in AdminList)||((getPlayerUID player) in ModList))the
 };
 //needs to be commented out for kill messages
 //#include "\z\addons\dayz_code\system\REsec.sqf";
-
+//Convoy Script
+if (ConvoyScript)then{
+	if (isServer) then {
+		execVM "andre_convoy\andre_convoy.sqf";
+	};
+};
 //Bus Route
 if (BusRouteScript)then{
 	if (isServer) then {

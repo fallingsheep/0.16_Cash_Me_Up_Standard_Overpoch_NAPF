@@ -308,6 +308,7 @@ if (isServer && isNil "sm_done") then {
 			};	
 			
 			if (_object isKindOf "AllVehicles") then {
+				_object setVariable ["lastInventory", _intentory];
 				{
 					_selection = _x select 0;
 					_dam = _x select 1;

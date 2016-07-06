@@ -84,7 +84,9 @@ _object_inventory = {
 		};
 		_previous = str(_object getVariable["lastInventory",[]]);
 		if (str(_inventory) != _previous) then {
-			_object setVariable["lastInventory",_inventory];
+			if(alive _object) then{
+				_object setVariable["lastInventory",_inventory];
+			};
 			if (_objectID == "0") then {
 				_key = format["CHILD:309:%1:%2:",_uid,_inventory];
 			} else {
@@ -115,6 +117,10 @@ _object_damage = {
 
 _object_killed = {
 	private["_hitpoints","_array","_hit","_selection","_key","_damage"];
+	
+	if(_object isKindOf "AllVehicles") then{
+		_object execVM "\z\addons\dayz_server\compile\server_crashLoot.sqf";
+	}; 
 	_hitpoints = _object call vehicle_getHitpoints;
 	//_damage = damage _object;
 	_damage = 1;
@@ -149,6 +155,7 @@ _object_killed = {
 		};
 	};
 };
+
 
 _object_repair = {
 	private["_hitpoints","_array","_hit","_selection","_key","_damage"];

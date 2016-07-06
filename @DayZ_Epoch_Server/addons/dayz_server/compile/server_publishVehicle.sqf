@@ -117,6 +117,6 @@ PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_object];
 	// testing - should make sure everyone has eventhandlers for vehicles was unused...
 	PVDZE_veh_Init = _object;
 	publicVariable "PVDZE_veh_Init";
-
+	_object setVariable ["lastInventory", []];
 	diag_log ("PUBLISH: Created " + (_class) + " with ID " + str(_uid));
 };

@@ -46,6 +46,18 @@ DZE_selfTransfuse_Values = [
 ns_blow_playerdamage = random 2000; // damage players take when blowout happens and they unprotected
 ns_blow_itemapsi = "NVGoggles"; //if player has this item they dont take damage form EVR
 
+//Crash loot
+/*
+Revamped instructions by Ree
+select 0 =  Locked vehicles Will not drop Loot ("Default: True") 
+select 1 = The Amount of Loot Piles around destroyed vehicles ("Default: 2") out of Max amount ___?  "Max Safe Amount" 
+select 2 =  Max additional loot piles On top of select 1 loot Piles  ("Default: 5")  out of Max amount ___?  "Max Safe Amount" 
+select 3 =  Radius around crash site to drop loot ("Default: 5")m out of Max amount ___?  "Max Safe Amount" 
+select 4 = Chance of gear being destroyed (Between 0-1, Ex: 0 = Never lost, 0.5 = Half lost, 1 = All lost)
+Default: DZE_crashLootConfig = [true,2,5,5,0];
+*/
+DZE_crashLootConfig = [false,2,5,5,0]; 
+
 ///////////////////////////////
 //		Scripts ON/OFF		//
 //////////////////////////////

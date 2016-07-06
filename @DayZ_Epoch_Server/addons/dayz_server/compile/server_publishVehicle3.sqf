@@ -129,6 +129,6 @@ _key call server_hiveWrite;
 	// for non JIP users this should make sure everyone has eventhandlers for vehicles.
 	PVDZE_veh_Init = _object;
 	publicVariable "PVDZE_veh_Init";
-	
+	_object setVariable ["lastInventory", [_weapons,_magazines,_backpacks]];
 	diag_log ("PUBLISH: " + str(_activatingPlayer) + " Upgraded " + (_class) + " with ID " + str(_uid));
 };

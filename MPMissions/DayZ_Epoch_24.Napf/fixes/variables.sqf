@@ -348,7 +348,7 @@ dayz_resetSelfActions = {
 	s_player_getdog = -1;
 	s_player_fishing = -1;
 	s_player_fish = -1;
-
+	s_player_hotwirevault = -1;
 };
 call dayz_resetSelfActions;
 

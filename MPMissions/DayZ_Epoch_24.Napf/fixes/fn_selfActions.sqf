@@ -783,6 +783,9 @@ if((_typeOfCursorTarget in DZE_DoorsLocked)) then {
 				s_player_unlockvault = 1;
 			} else {
 				if(_characterID != dayz_combination && _ownerID != _playerUID) then {
+					if(_hasHotwireKit) then {
+						 s_player_hotwirevault = player addaction [("<t color=""#B40404"">" + ("Hotwire Vault") +"</t>"), "Path_To\vault_hotwire.sqf",_cursorTarget, 0, false, true, "", ""];
+					};
 					_combi = player addAction [localize "STR_EPOCH_ACTIONS_RECOMBO", "\z\addons\dayz_code\actions\vault_combination_1.sqf",_cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
 					s_player_unlockvault = 1;
@@ -793,6 +796,8 @@ if((_typeOfCursorTarget in DZE_DoorsLocked)) then {
 		
 		{player removeAction _x} count s_player_combi;s_player_combi = [];
 		s_player_unlockvault = -1;
+		player removeAction s_player_hotwirevault;
+		s_player_hotwirevault = -1;
 	};
 	//Currency
 		if(_typeOfCursorTarget in ZSC_MoneyStorage && (player distance _cursorTarget < 5)) then {
@@ -1362,6 +1367,8 @@ _bankrobbery = cursorTarget isKindOf "Notebook";
 	s_smelt_bars = -1;
 	player removeAction s_smelt_10bars;
 	s_smelt_10bars = -1;
+	player removeAction s_player_hotwirevault;
+	s_player_hotwirevault = -1;
 };
 //Dog actions on player self
 _dogHandle = player getVariable ["dogID", 0];

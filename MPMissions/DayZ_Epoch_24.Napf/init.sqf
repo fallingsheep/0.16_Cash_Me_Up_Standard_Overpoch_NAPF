@@ -236,6 +236,11 @@ if(WindDustScript)then{
 if(GroundFogScript)then{
 	execVM "scripts\Weather\ground_fog.sqf"; //FPS HIT
 };
+if(WEAPONSWITCH_SCRIPT)then{
+	if (!isserver) then {
+		execvm "scripts\weaponswitch\weaponHud.sqf";
+	};
+};
 
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf";
 

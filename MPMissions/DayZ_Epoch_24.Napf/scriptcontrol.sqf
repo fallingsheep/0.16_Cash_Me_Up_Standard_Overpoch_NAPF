@@ -61,8 +61,8 @@ DZE_crashLootConfig = [false,2,5,5,0];  // to disable loot when explodes set it 
 ///////////////////////////////
 //		Scripts ON/OFF		//
 //////////////////////////////
-
-
+//WeaponSwitching
+WEAPONSWITCH_SCRIPT = true;
 //locate vehicles on map
 LocateVehicleScript = true;
 //Server watermark

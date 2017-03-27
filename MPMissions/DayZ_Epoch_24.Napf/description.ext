@@ -1,6 +1,9 @@
 //Currency
 #include "ZSC\config\cfgServerTrader.hpp"
 
+//Weapon HUD
+#include "scripts\weaponswitch\weaponHud.hpp"
+
 //Journal
 class RscIGUIShortcutButton;
 #include "scripts\journal\CfgPlayerStats\defines.hpp"

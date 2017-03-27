@@ -261,4 +261,12 @@ if (_dikCode == 0x04) then {
 	AAC_3 = true;
 };
 
+//Weapon Switch
+if(WEAPONSWITCH_SCRIPT)then{
+	if (_dikCode == 0x02) then {player selectWeapon (primaryWeapon player);};
+	if (_dikCode == 0x03) then { _handgun ="";{if((getNumber (configFile >> "CfgWeapons" >> (_x) >> "type")) == 2) then {_handgun = _x;};}foreach weapons player;player selectweapon _handgun;};
+	if (_dikCode == 0x04) then {[0,0,0,[player]] execVM "\z\addons\dayz_code\medical\bandage.sqf";};
+	if (_dikCode == 0x05) then { };
+};
+
 _handled

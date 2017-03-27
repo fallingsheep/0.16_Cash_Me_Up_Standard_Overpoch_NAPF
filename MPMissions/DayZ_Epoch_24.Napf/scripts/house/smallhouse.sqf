@@ -5,11 +5,15 @@ private ["_playerPos","_nearhouse","_Playersurvived","_inventory","_hasitem1","_
 _inventory = items player;
 _hasitem1 = [["ItemWoodWall",4], "ItemWoodFloor"] call player_checkItems;
 _Playersurvived = dayz_Survived;
+_costsml = 1000;
+_playerMoney = player getVariable["cashMoney",0];
+if (_playerMoney < _costsml) exitWith {
+	[format["<t align='center' size='0.75' color='#FFCC00'>You need %1 to build this.</t>",_costsml],0,0,2,2] spawn BIS_fnc_dynamicText; 
+};
 
 if (_Playersurvived < 2) exitWith {
 [format["<t align='center' size='0.75' color='#FFCC00'>>not yet! you have %1 days survived. and needs almost 2 days</t>",_Playersurvived],0,0,2,2] spawn BIS_fnc_dynamicText; 
 };
-
 ////////////////////////FIND NEAREST HOUSES AND PREVENT ANOTHER BUILD
 _playerPos = getPosATL player;
 _nearhouse = count nearestObjects [_playerPos, ["MAP_deutshe_mini","MAP_Mil_Mil_Guardhouse","MAP_bouda2_vnitrek"], 45] > 0;
@@ -494,7 +498,8 @@ publicVariableServer  "PVDZE_veh_Publish";
 // MESSAGE HERE///////////////
 [format["<t align='center' size='0.50' color='#FFCC00'>>Nice! A Small House Survivor!<</t>",_Playersurvived],0,0,2,2] spawn BIS_fnc_dynamicText;  
 //cutText [format["Nice House Survivor!"], "PLAIN DOWN",3];
- 
+ //Remove cost and set money
+player setVariable["cashMoney",(_playerMoney - _costsml),true];
 ////////////////////////////////////////////
  
 player reveal _tmpbuilt;

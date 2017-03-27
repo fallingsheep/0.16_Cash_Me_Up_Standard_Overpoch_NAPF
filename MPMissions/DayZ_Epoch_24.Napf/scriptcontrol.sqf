@@ -8,17 +8,17 @@ server_name = "0.16 NAPF"; //Watermark Text
 //Debris
 MaxDynamicDebris = 100; // max number of junk that can spawn randomly on map
 //Vehicles
-MaxVehicleLimit = 50; //max number of vehicles that can spawn randomly on map
+MaxVehicleLimit = 100; //max number of vehicles that can spawn randomly on map
 //player zombies
 DZE_PlayerZed = false; // should players have chance of becoming a ZOMBIE when they respawn after death
 //Recruit Survivors
-DBMaxSurvivors = 5; // change this to the number of survivors you want, the more you add the lower your server and client FPS
+DBMaxSurvivors = 10; // change this to the number of survivors you want, the more you add the lower your server and client FPS
 //Full Moon Nights
 dayz_fullMoonNights = true; // full moons at night
 //Mining Veins
 MaxMineVeins = 50; // max ore veins on map
 //Animals
-dayz_maxAnimals = 8; // max wild animals
+dayz_maxAnimals = 20; // max wild animals
 dayz_tameDogs = true; // can dogs be tamed
 //Weight
 DZE_R3F_WEIGHT = true; //use weight system
@@ -283,6 +283,6 @@ Admin_Crafting = AdminList;
 
 //Repack version 
 REPACKMOD = "0.16 Overpoch NAPF"; 
-BUILDNUMBER = "51";
+BUILDNUMBER = "57";
 
 

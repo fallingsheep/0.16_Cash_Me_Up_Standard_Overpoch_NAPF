@@ -1,6 +1,6 @@
 
 
-private ["_playerPos","_nearhouse","_Playersurvived","_inventory","_hasitem1","_Playersurvived","_removed","_helperColor","_objectHelper","_objectHelperDir","_objectHelperPos","_canDo", "_pos", "_cnt",
+private ["_playerPos","_nearhouse","_Playersurvived","_inventory","_hasitem1","_removed","_helperColor","_objectHelper","_objectHelperDir","_objectHelperPos","_canDo", "_pos", "_cnt",
 "_location","_dir","_classname","_item","_hasrequireditem","_missing","_hastoolweapon","_cancel","_reason","_started","_finished","_animState","_isMedic","_dis","_sfx","_hasbuilditem","_tmpbuilt","_onLadder","_isWater","_require","_text","_offset","_IsNearPlot","_isOk","_location1","_location2","_counter","_limit","_proceed","_num_removed","_position","_object","_canBuildOnPlot","_friendlies","_nearestPole","_ownerID","_findNearestPoles","_findNearestPole","_distance","_classnametmp","_ghost","_isPole","_needText","_lockable","_zheightchanged","_rotate","_combination_1","_combination_2","_combination_3","_combination_4","_combination","_combination_1_Display","_combinationDisplay","_zheightdirection","_abort","_isNear","_need","_objHupDiff","_needNear","_vehicle","_inVehicle","_requireplot","_objHDiff","_isLandFireDZ","_isTankTrap"];
  
 //VARIABLES
@@ -8,6 +8,11 @@ _inventory = items player;
 _hasitem1 = [["cinder_wall_kit",2], "ItemWoodFloor"] call player_checkItems;
 _Playersurvived = dayz_Survived;
 PlayerHumanity = (player getVariable"humanity");
+_costsml = 25000;
+_playerMoney = player getVariable["cashMoney",0];
+if (_playerMoney < _costsml) exitWith {
+	[format["<t align='center' size='0.75' color='#FFCC00'>You need %1 to build this.</t>",_costsml],0,0,2,2] spawn BIS_fnc_dynamicText; 
+};
 
 if (_Playersurvived < 2) exitWith {
 [format["<t align='center' size='0.75' color='#FFCC00'>>not yet! you have %1 days survived. and needs almost 2 days Hero</t>",_Playersurvived],0,0,2,2] spawn BIS_fnc_dynamicText; 
@@ -504,7 +509,7 @@ publicVariableServer  "PVDZE_veh_Publish";
 // MESSAGE HERE///////////////
 [format["<t align='center' size='0.50' color='#FFCC00'>>Nice one Hero!<</t>",_Playersurvived],0,0,2,2] spawn BIS_fnc_dynamicText;  
 //cutText [format["Nice House Survivor!"], "PLAIN DOWN",3];
- 
+player setVariable["cashMoney",(_playerMoney - _costsml),true]; 
 ////////////////////////////////////////////
  
 player reveal _tmpbuilt;

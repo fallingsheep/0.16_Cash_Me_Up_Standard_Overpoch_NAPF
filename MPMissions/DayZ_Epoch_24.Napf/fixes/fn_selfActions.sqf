@@ -353,6 +353,16 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	_player_flipveh = false;
 	_player_deleteBuild = false;
 	_player_lockUnlock_crtl = false;
+	//Plotmenu Hero hospital
+	if (_canDo && (speed player <= 1) && (_cursorTarget isKindOf "GUE_WarfareBFieldhHospital")) then {
+		if (s_player_hospitalhero < 0) then {
+			s_player_hospitalhero = player addAction ["<t color='#ff5200'>Heal-in-Tent</t>", "custom\scripts\house\hospitalhero.sqf", [], 5, false];
+		};
+	} else {
+		player removeAction s_player_hospitalhero;
+		s_player_hospitalhero = -1;
+	};
+	
 	 if (_canDo && (speed player <= 1) && (_cursorTarget isKindOf "Plastic_Pole_EP1_DZ")) then {
 		 if (s_player_plotManagement < 0) then {
 			_adminList = adminlist; // Add admins here if you admins to able to manage all plotpoles
@@ -365,7 +375,8 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 			} forEach _friends;
 			_allowed = [_owner];    
 			_allowed = [_owner] + _adminList + _fuid;
-			if((getPlayerUID player) in _allowed)then{            
+			if((getPlayerUID player) in _allowed)then{
+			s_player_plotmenu = player addAction ["<t color='#ff5200'>Plot Build Menu</t>", "scripts\house\plotmenu.sqf", [], 5, false];            
 			s_player_plotManagement = player addAction ["<t color='#0059FF'>Manage Plot</t>", "scripts\plotManagement\initPlotManagement.sqf", [], 5, false];
 			};
 		};
@@ -381,6 +392,8 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 			s_player_maintain_area = -1;
     		player removeAction s_player_maintain_area_preview;
 			s_player_maintain_area_preview = -1;
+			player removeAction s_player_plotmenu;
+			s_player_plotmenu = -1;
 	 };
 	// CURSOR TARGET ALIVE
 	if(_isAlive) then {
@@ -978,7 +991,7 @@ if((_typeOfCursorTarget in DZE_DoorsLocked)) then {
 		s_player_downgrade_build = -1;
 	};
 	// inplace maintenance tool
-	if((_cursorTarget isKindOf "ModularItems" || _cursorTarget isKindOf "DZE_Housebase" || _typeOfCursorTarget == "LightPole_DZ") && (damage _cursorTarget >= DZE_DamageBeforeMaint)) then {
+	if((_cursorTarget isKindOf "ModularItems" || ((typeOf _cursorTarget) in DZE_SurvivedHouseRemove) || _cursorTarget isKindOf "DZE_Housebase" || _typeOfCursorTarget == "LightPole_DZ") && (damage _cursorTarget >= DZE_DamageBeforeMaint)) then {
 		if ((s_player_lastTarget select 2) != _cursorTarget) then {
 			if (s_player_maint_build > 0) then {
 							
@@ -1371,6 +1384,11 @@ _bankrobbery = cursorTarget isKindOf "Notebook";
 	s_smelt_10bars = -1;
 	player removeAction s_player_hotwirevault;
 	s_player_hotwirevault = -1;
+	
+	player removeAction s_player_hospitalhero;
+    s_player_hospitalhero = -1;
+    player removeAction s_player_plotmenu;
+    s_player_plotmenu = -1;
 };
 //Dog actions on player self
 _dogHandle = player getVariable ["dogID", 0];

@@ -2,7 +2,7 @@
 delete object from db with extra waiting by [VB]AWOL
 parameters: _obj
 */
-private ["_activatingPlayer","_obj","_objectID","_objectUID","_started","_finished","_animState","_isMedic","_isOk","_proceed","_counter","_limit","_objType","_sfx","_dis","_itemOut","_countOut","_selectedRemoveOutput","_friendlies","_nearestPole","_ownerID","_refundpart","_isWreck","_findNearestPoles","_findNearestPole","_IsNearPlot","_brokenTool","_removeTool","_isDestructable","_isRemovable","_objOwnerID","_isOwnerOfObj","_preventRefund","_ipos","_item","_radius","_isWreckBuilding","_nameVehicle","_isModular","_playerUID"];
+private ["_activatingPlayer","_obj","_objectID","_objectUID","_started","_finished","_animState","_isMedic","_isOk","_proceed","_counter","_limit","_objType","_sfx","_dis","_itemOut","_countOut","_selectedRemoveOutput","_friendlies","_nearestPole","_ownerID","_refundpart","_isWreck","_findNearestPoles","_findNearestPole","_IsNearPlot","_brokenTool","_removeTool","_isDestructable","_isRemovable","_objOwnerID","_isOwnerOfObj","_preventRefund","_ipos","_item","_radius","_isWreckBuilding","_nameVehicle","_isModular","_playerUID","_is_Removable","_isallowedremove"];
 
 if(DZE_ActionInProgress) exitWith { cutText [(localize "str_epoch_player_88") , "PLAIN DOWN"]; };
 DZE_ActionInProgress = true;
@@ -28,6 +28,7 @@ _objectUID	= _obj getVariable ["ObjectUID","0"];
 _isOk = true;
 _proceed = false;
 _objType = typeOf _obj;
+_isallowedremove = false; 
 
 // Chance to break tools
 _isDestructable = _obj isKindOf "BuiltItems";
@@ -36,6 +37,7 @@ _isRemovable = _objType in DZE_isRemovable;
 _isWreckBuilding = _objType in DZE_isWreckBuilding;
 _isMine = _objType in ["Land_iron_vein_wreck","Land_silver_vein_wreck","Land_gold_vein_wreck"];
 _isModular = _obj isKindOf "ModularItems";
+_is_Removable = _objType in DZE_SurvivedHouseRemove;
 
 _limit = 3;
 if (DZE_StaticConstructionCount > 0) then {
@@ -72,6 +74,7 @@ if(_IsNearPlot >= 1) then {
 };
 
 _nameVehicle = getText(configFile >> "CfgVehicles" >> _objType >> "displayName");
+if (!_isallowedremove && _is_Removable) exitWith {DZE_ActionInProgress = false; cutText [format["You are not allowed to remove this object (%1)",_nameVehicle], "PLAIN DOWN"]; }; //maybe change the text to your liking
 
 cutText [format[(localize "str_epoch_player_162"),_nameVehicle], "PLAIN DOWN"];
 

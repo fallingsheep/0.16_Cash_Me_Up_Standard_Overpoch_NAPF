@@ -349,6 +349,8 @@ dayz_resetSelfActions = {
 	s_player_fishing = -1;
 	s_player_fish = -1;
 	s_player_hotwirevault = -1;
+	s_player_plotmenu = -1;
+    s_player_hospitalhero = -1;
 };
 call dayz_resetSelfActions;
 
@@ -870,13 +872,14 @@ dayz_allowedObjects = ["MAP_picture_a",
 "CinderWallDoor_DZ","CinderWallDoorLocked_DZ","CinderWallSmallDoorway_DZ",
 "CinderWallDoorSmall_DZ","CinderWallDoorSmallLocked_DZ","MetalFloor_DZ",
 "WoodRamp_DZ","GunRack_DZ","FireBarrel_DZ","WoodCrate_DZ","Scaffolding_DZ",
-"MetalFloor_Preview_DZ","HeliHRescue"
+"MetalFloor_Preview_DZ","HeliHRescue","GUE_WarfareBFieldhHospital","MAP_bouda2_vnitrek","MAP_deutshe_mini","MAP_Mil_Mil_Guardhouse"
 
 ];
+DZE_SurvivedHouseRemove = ["GUE_WarfareBFieldhHospital","MAP_bouda2_vnitrek","MAP_deutshe_mini","MAP_Mil_Mil_Guardhouse"];
 DZE_LockableStorage = ["VaultStorage","VaultStorageLocked","LockboxStorageLocked","LockboxStorage"];
 DZE_LockedStorage = ["VaultStorageLocked","LockboxStorageLocked"];
 DZE_UnLockedStorage = ["VaultStorage","LockboxStorage"];
-DZE_maintainClasses = ["ModularItems","DZE_Housebase","LightPole_DZ","BuiltItems","Plastic_Pole_EP1_DZ","Fence_corrugated_DZ","CanvasHut_DZ","ParkBench_DZ","MetalGate_DZ","StickFence_DZ","DesertCamoNet_DZ","ForestCamoNet_DZ","DesertLargeCamoNet_DZ","ForestLargeCamoNet_DZ","DeerStand_DZ","Scaffolding_DZ","FireBarrel_DZ"];
+DZE_maintainClasses = ["GUE_WarfareBFieldhHospital","MAP_bouda2_vnitrek","MAP_deutshe_mini","MAP_Mil_Mil_Guardhouse","ModularItems","DZE_Housebase","LightPole_DZ","BuiltItems","Plastic_Pole_EP1_DZ","Fence_corrugated_DZ","CanvasHut_DZ","ParkBench_DZ","MetalGate_DZ","StickFence_DZ","DesertCamoNet_DZ","ForestCamoNet_DZ","DesertLargeCamoNet_DZ","ForestLargeCamoNet_DZ","DeerStand_DZ","Scaffolding_DZ","FireBarrel_DZ"];
 
 DZE_DoorsLocked = ["Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked","Land_DZE_WoodDoorLocked","CinderWallDoorLocked_DZ","CinderWallDoorSmallLocked_DZ"];
 

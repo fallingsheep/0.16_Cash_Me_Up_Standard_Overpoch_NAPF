@@ -121,4 +121,16 @@ ALCHEMY = [
 } else {
 	ALCHEMY = [];
 };
-DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE + BINOCULAR + CAREPACKAGESELF + LOCATEVEHICLE + CAREPACKAGEMAP + HARVEST + WALKDEAD + ALCHEMY + DZGMCLICK;
+if(PLOTBUILDHOUSESCRIPT)then{
+PLOTBUILD = [
+	["ItemEtool","Hero House","[] execVM 'scripts\house\herohouse.sqf';","true"],
+	["ItemEtool","Small House","[] execVM 'scripts\house\smallhouse.sqf';","true"],
+	["ItemEtool","Small House","[] execVM 'scripts\house\mediumhouse.sqf';","true"],
+	["ItemEtool","Small House","[] execVM 'scripts\house\largehouse.sqf';","true"]
+];
+
+}} else {
+	PLOTBUILD = [];
+};
+
+DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE + BINOCULAR + CAREPACKAGESELF + LOCATEVEHICLE + CAREPACKAGEMAP + HARVEST + WALKDEAD + ALCHEMY + DZGMCLICK + PLOTBUILD;

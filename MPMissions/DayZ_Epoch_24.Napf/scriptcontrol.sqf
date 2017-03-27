@@ -61,6 +61,10 @@ DZE_crashLootConfig = [false,2,5,5,0];  // to disable loot when explodes set it 
 ///////////////////////////////
 //		Scripts ON/OFF		//
 //////////////////////////////
+//EPOCH LIFE
+EPOCHLIFESCRIPT = true;
+//Build house days survived
+PLOTBUILDHOUSESCRIPT = true;
 //WeaponSwitching
 WEAPONSWITCH_SCRIPT = true;
 //locate vehicles on map

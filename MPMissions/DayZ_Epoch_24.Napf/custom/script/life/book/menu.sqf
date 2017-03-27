@@ -1,0 +1,1 @@
+[format["<t size='1.2' color='#D01000'>Dear Survivor %1</t><br/><t size='0.9'>read this book to learn about farming,cook,crafting and more.</t>",(name player)],0,0,2,2] spawn BIS_fnc_dynamicText;

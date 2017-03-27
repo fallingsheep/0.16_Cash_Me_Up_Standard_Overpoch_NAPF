@@ -129,8 +129,44 @@ PLOTBUILD = [
 	["ItemEtool","Small House","[] execVM 'scripts\house\largehouse.sqf';","true"]
 ];
 
-}} else {
+} else {
 	PLOTBUILD = [];
 };
+if(EPOCHLIFESCRIPT)then{
+EPOCHLIFE = [
+	["ItemBook3","Cover","[] execVM 'custom\script\life\book\cover.sqf';","true"],
+	["ItemBook3","Guide to Breeding","[] execVM 'custom\script\life\book\display.sqf';","true"],
+	["ItemBook3","Guide to Farming","[] execVM 'custom\script\life\book\display2.sqf';","true"],
+	["MeleeFishingPole","Fish in Pond","[] execVM 'custom\script\breeding\fisher.sqf';","true"],
+	["ItemBurlap","Cow","[] execVM 'custom\script\breeding\cow.sqf';","true"],
+	["ItemBurlap","Sheep","[] execVM 'custom\script\breeding\sheep.sqf';","true"],
+	["ItemBurlap","WildPig","[] execVM 'custom\script\breeding\wildpig.sqf';","true"],
+	["ItemBurlap","Rabbit","[] execVM 'custom\script\breeding\rabbit.sqf';","true"],
+	["ItemBurlap","Chicken","[] execVM 'custom\script\breeding\chiken.sqf';","true"],
+	["ItemSledge","Animal Shed","[] execVM 'custom\script\breeding\animalshed.sqf';","true"],
+	["ItemSledge","Kitchen","[] execVM 'custom\script\cook\kitchen.sqf';","true"],
+	["ItemShovel","Scarecrow","[] execVM 'custom\script\farming\boogieman.sqf';","true"],
+	["ItemShovel","Plant Pumpkins","[] execVM 'custom\script\farming\pumpkins.sqf';","true"],
+	["ItemShovel","Plant Corn","[] execVM 'custom\script\farming\corn.sqf';","true"],
+	["ItemShovel","Dig Fish Pond","[] execVM 'custom\script\farming\fishpond.sqf';","true"],
+	["ItemShovel","Find Worms/Seed","[] execVM 'custom\script\breeding\find.sqf';","true"],
+	["ItemMachete","Harvest Pumpkins","[] execVM 'custom\script\farming\harvestpumpkins.sqf';","true"],
+	["ItemMachete","Harvest Corn","[] execVM 'custom\script\farming\harvestcorn.sqf';","true"],
+	["ItemMachete","Harvest Tea","[] execVM 'custom\script\farming\harvestTea.sqf';","true"],
+	["FoodrabbitRaw","Cook Rabbit","[] execVM 'custom\script\cook\cookrabbit.sqf';","true"],
+	["FoodbaconRaw","Cook Bacon","[] execVM 'custom\script\cook\cookbacon.sqf';","true"],
+	["FoodchickenRaw","Cook Chicken","[] execVM 'custom\script\cook\cookchiken.sqf';","true"],
+	["FoodmuttonRaw","Cook Mutton","[] execVM 'custom\script\cook\cookmutton.sqf';","true"],
+	["FoodSteakRaw","Cook Steak","[] execVM 'custom\script\cook\cooksteak.sqf';","true"],
+	["FoodmeatRaw","Cook Meat","[] execVM 'custom\script\cook\cookmeat.sqf';","true"],
+	["FoodbeefRaw","Cook Beef","[] execVM 'custom\script\cook\cookbeef.sqf';","true"],
+	["ItemTuna","Cook Tuna","[] execVM 'custom\script\cook\cookfishtuna.sqf';","true"],
+	["ItemTrout","Cook Trout","[] execVM 'custom\script\cook\cookfishtrout.sqf';","true"],
+	["ItemSeaBass","Cook SeaBass","[] execVM 'custom\script\cook\cookfishseabass.sqf';","true"]
+];
 
-DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE + BINOCULAR + CAREPACKAGESELF + LOCATEVEHICLE + CAREPACKAGEMAP + HARVEST + WALKDEAD + ALCHEMY + DZGMCLICK + PLOTBUILD;
+} else {
+	EPOCHLIFE = [];
+};
+
+DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE + BINOCULAR + CAREPACKAGESELF + LOCATEVEHICLE + CAREPACKAGEMAP + HARVEST + WALKDEAD + ALCHEMY + DZGMCLICK + PLOTBUILD + EPOCHLIFE;

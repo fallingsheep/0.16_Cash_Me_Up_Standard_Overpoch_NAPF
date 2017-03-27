@@ -16,7 +16,7 @@ class Category_901 {
 	};
 	class ItemSodaRabbit {
 		type = "trade_items";
-		buy[] = {5000,"Coins"};
+		buy[] = {10000,"Coins"};
 		sell[] = {5000,"Coins"};
 	};
 };

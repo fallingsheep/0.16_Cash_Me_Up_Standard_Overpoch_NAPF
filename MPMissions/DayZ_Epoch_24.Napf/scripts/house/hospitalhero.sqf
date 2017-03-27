@@ -1,5 +1,12 @@
 	
 	disableSerialization;
+	_costsml = 1500;
+	_playerMoney = player getVariable["cashMoney",0];
+	if (_playerMoney < _costsml) exitWith {
+		[format["<t align='center' size='0.75' color='#FFCC00'>You need %1 to heal.</t>",_costsml],0,0,2,2] spawn BIS_fnc_dynamicText; 
+	};
+	player setVariable["cashMoney",(_playerMoney - _costsml),true]; 
+	
                                 dayz_sourceBleeding = objNull;
                                 r_player_blood = r_player_bloodTotal;
                                 r_player_inpain = false;

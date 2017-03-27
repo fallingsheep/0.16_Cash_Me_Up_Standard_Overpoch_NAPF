@@ -67,12 +67,13 @@ EPOCHLIFESCRIPT = true;
 PLOTBUILDHOUSESCRIPT = true;
 //WeaponSwitching
 WEAPONSWITCH_SCRIPT = true;
+//Convoys
+ConvoyScript = true;
+
 //locate vehicles on map
 LocateVehicleScript = true;
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
-//Convoys
-ConvoyScript = true;
 //Hot wire safes
 HotwireSafeScript = true;
 //Slow zombies

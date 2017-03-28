@@ -272,6 +272,14 @@ if (isServer) then {
 
 //Bank
 [] ExecVM "\z\addons\dayz_server\CustomBuildings\bank_building.sqf";
+
+//Extra road and small towns
+[] ExecVM "\z\addons\dayz_server\CustomBuildings\NapfRoadNtown.sqf";
+
+//milan AI area
+[] ExecVM "\z\addons\dayz_server\CustomBuildings\fubar.sqf";
+[] ExecVM "\z\addons\dayz_server\CustomBuildings\fubarcrates.sqf";
+
 };
 
 // DO NOT CHANGE THIS!!
@@ -286,6 +294,6 @@ Admin_Crafting = AdminList;
 
 //Repack version 
 REPACKMOD = "0.16 Overpoch NAPF"; 
-BUILDNUMBER = "57";
+BUILDNUMBER = "60";
 
 

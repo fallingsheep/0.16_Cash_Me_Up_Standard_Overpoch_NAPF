@@ -61,6 +61,8 @@ DZE_crashLootConfig = [false,2,5,5,0];  // to disable loot when explodes set it 
 ///////////////////////////////
 //		Scripts ON/OFF		//
 //////////////////////////////
+//Exploding gas stations
+EXPLODING_GAS_STATION_SCRIPT = true;
 //EPOCH LIFE
 EPOCHLIFESCRIPT = true;
 //Build house days survived

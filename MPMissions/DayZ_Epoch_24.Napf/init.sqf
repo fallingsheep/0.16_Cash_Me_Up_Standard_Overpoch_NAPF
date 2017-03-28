@@ -30,7 +30,7 @@ spawnShoremode = 0;
 spawnArea= 1500; // Default = 1500
 setTerrainGrid 50;    //Grass (Hi)12.5 or 25(Med/standard) or 50(Low/off)
 dayz_MapArea = 25000; // Default = 10000
-dayz_maxLocalZombies = 10; // Default = 30 
+dayz_maxLocalZombies = 20; // Default = 30 
 dayz_spawnselection = 0;
 dayz_paraSpawn = false;
 dayz_minpos = -1000; 
@@ -78,13 +78,16 @@ ELE_StopClass = "MetalFloor_Preview_DZ";
 
 	EpochEvents = [
 	["any","any","any","any",30,"crash_spawner"],
+	["any","any","any","any",10,"oreveins"], 
 	["any","any","any","any",0,"crash_spawner"],
 	["any","any","any","any",25,"crash_spawner"],
+	["any","any","any","any",18,"oreveins"], 
 	["any","any","any","any",15,"supply_drop"],
 	["any","any","any","any",50,"supply_drop"],
 	["any","any","any","any",10,"Military"], 
 	["any","any","any","any",25,"Treasure"], 
-	["any","any","any","any",40,"Supplyitems"], 
+	["any","any","any","any",40,"Supplyitems"],
+	["any","any","any","any",35,"oreveins"], 	
 	["any","any","any","any",55,"Construction"]
 	];
 
@@ -118,6 +121,11 @@ if (isServer) then {
 	// Add trader citys
 	_nil = [] execVM "\z\addons\dayz_server\missions\DayZ_Epoch_24.Napf\mission.sqf";
 	_serverMonitor = 	[] execVM "\z\addons\dayz_server\system\server_monitor.sqf";
+	
+	if(EXPLODING_GAS_STATION_SCRIPT)then{
+		_gasstations = [] execVM "scripts\fuelexplosion.sqf";
+	};
+	
 };
 
 endLoadingScreen; // Work around for loadscreen freeze

@@ -1,15 +1,6 @@
 //Currency
 #include "ZSC\config\cfgServerTrader.hpp"
 
-//EPOCH LIFE//
-#include "custom\script\life\book\defineslife.hpp"
-#include "custom\script\life\book\cover.hpp"
-#include "custom\script\life\book\display.hpp"
-#include "custom\script\life\book\display2.hpp"
-
-//Weapon HUD
-#include "scripts\weaponswitch\weaponHud.hpp"
-
 //Journal
 class RscIGUIShortcutButton;
 #include "scripts\journal\CfgPlayerStats\defines.hpp"
@@ -1672,3 +1663,12 @@ class CfgSounds
 #include "scripts\spawn\class.hpp"
 #include "scripts\spawn\halo.hpp"
 #include "scripts\spawn\spawn.hpp"
+
+//EPOCH LIFE//
+#include "custom\script\life\book\defineslife.hpp"
+#include "custom\script\life\book\cover.hpp"
+#include "custom\script\life\book\display.hpp"
+#include "custom\script\life\book\display2.hpp"
+
+//Weapon HUD
+#include "scripts\weaponswitch\weaponHud.hpp"
